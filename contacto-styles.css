@@ -1,0 +1,276 @@
+/* =========================================================
+   CONTACTO - RESTAURANTE LA MIMBRE
+   contacto-styles.css
+   ========================================================= */
+
+:root {
+  --azul-fondo:  #2F3E53;
+  --azul-panel:  #2F3E53;
+  --dorado: #e6b978;
+  --dorado-claro: #f0c98d;
+  --azul-enlace: #2498d8;
+  --blanco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.20);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--azul-fondo);
+  color: var(--dorado);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.35;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--dorado);
+}
+
+a:hover {
+  color: var(--dorado-claro);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contacto {
+  width: min(100%, 1050px);
+  margin: 0 auto;
+  padding: 20px 38px 60px;
+}
+
+/* LOGO DE SECCIÓN */
+.logo-restaurante {
+  display: block;
+  width: min(100%, 500px);
+  height: auto;
+  margin: 0 auto 30px;
+}
+
+/* TÍTULOS */
+h2 {
+  margin: 0 0 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+h3 {
+  margin: 20px 0 3px;
+  font-size: 18px;
+}
+
+/* DATOS DE CONTACTO */
+.datos-contacto {
+  margin-bottom: 35px;
+}
+
+.datos-contacto address {
+  font-style: normal;
+  font-size: 18px;
+}
+
+.datos-contacto p {
+  margin: 4px 0;
+}
+
+.datos-contacto strong {
+  font-weight: 400;
+}
+
+.datos-contacto a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* MAPA */
+.mapa-section {
+  margin-bottom: 45px;
+}
+
+.section-title {
+  margin-bottom: 14px;
+}
+
+.mapa-wrapper {
+  width: 100%;
+  min-height: 390px;
+  overflow: hidden;
+  border: 1px solid rgba(230, 185, 120, 0.35);
+  box-shadow: 0 8px 20px var(--sombra);
+}
+
+.mapa-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 390px;
+  border: 0;
+}
+
+.btn-mapa {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 11px 17px;
+  border: 1px solid var(--dorado);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn-mapa:hover {
+  background: var(--dorado);
+  color: var(--azul-fondo);
+}
+
+/* CÓMO LLEGAR */
+.como-llegar {
+  font-size: 18px;
+}
+
+.introduccion {
+  margin: 0 0 22px;
+}
+
+/* RUTAS (ACORDEÓN) */
+.ruta {
+  margin: 0 0 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(230, 185, 120, 0.16);
+}
+
+.ruta-titulo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: var(--dorado);
+  font: inherit;
+  font-weight: 800;
+  font-size: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.flecha {
+  font-size: 25px;
+  transition: transform 0.2s ease;
+}
+
+.ruta-titulo[aria-expanded="false"] .flecha {
+  transform: rotate(-90deg);
+}
+
+.ruta-contenido {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.3s ease, opacity 0.25s ease;
+  opacity: 1;
+}
+
+.ruta-contenido p {
+  margin: 6px 0 10px;
+}
+
+.ruta-contenido ul {
+  margin: 5px 0 18px;
+  padding-left: 24px;
+}
+
+.ruta-contenido li {
+  margin: 3px 0;
+}
+
+.ruta-contenido a {
+  font-weight: 700;
+}
+
+/* BOTONES DE ACCIÓN */
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.boton-principal {
+  background: var(--dorado);
+  color: var(--azul-fondo);
+}
+
+.boton-principal:hover {
+  background: var(--dorado-claro);
+  color: var(--azul-fondo);
+}
+
+.boton-secundario {
+  border: 1px solid var(--dorado);
+}
+
+.boton-secundario:hover {
+  background: var(--dorado);
+  color: var(--azul-fondo);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .contacto {
+    padding: 15px 20px 45px;
+  }
+
+  .datos-contacto address,
+  .como-llegar {
+    font-size: 16px;
+  }
+
+  .mapa-wrapper,
+  .mapa-wrapper iframe {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .ruta-titulo {
+    font-size: 18px;
+  }
+
+  .acciones {
+    flex-direction: column;
+  }
+
+  .boton {
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .contacto {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* ACCESIBILIDAD */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--azul-enlace);
+  outline-offset: 3px;
+}

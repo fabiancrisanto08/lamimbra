@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto, ubicación y cómo llegar al Restaurante La Mimbre en Granada.">
+  <title>Contacto | Restaurante La Mimbre</title>
+
+  <!-- Estilos del navbar unificado y de la página de contacto -->
+  <link rel="stylesheet" href="inicio-styles.css">
+  <link rel="stylesheet" href="contacto-styles.css">
+
+  <!-- Scripts de la navegación unificada y de interacción de contacto -->
+  <script src="inicio-main.js" defer></script>
+  <script src="contacto-main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
+  <header class="cabecera">
+    <nav class="nav">
+      <a href="index.html" class="logo-mini">LA MIMBRE</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">INICIO</a>
+        <a href="menu.html">MENÚ</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="reserva.html">RESERVA</a>
+        <a href="contacto.html" class="active">CONTACTO</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contacto">
+
+    <!-- CABECERA DE SECCIÓN -->
+    <header class="contacto-header">
+      <img
+        src="IMG/Logotipo elegante de La Mimbre.png"
+        alt="La Mimbre Restaurante"
+        class="logo-restaurante"
+      >
+    </header>
+
+    <!-- DATOS DE CONTACTO -->
+    <section class="datos-contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+
+      <address>
+        <p>
+          <strong>Dirección:</strong>
+          P.º del Generalife, S/N, Centro, 18009 Granada
+        </p>
+
+        <p>
+          <strong>Teléfono:</strong>
+          <a href="tel:+34958222776">958 22 27 76</a>
+          ·
+          <a href="tel:+34628032009">628 032 009</a>
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/34628032009" target="_blank" rel="noopener noreferrer">
+            628 032 009
+          </a>
+        </p>
+
+        <p>
+          <strong>E-mail:</strong>
+          <a href="mailto:info@restaurantelamimbre.es">
+            info@restaurantelamimbre.es
+          </a>
+        </p>
+      </address>
+    </section>
+
+    <!-- MAPA -->
+    <section class="mapa-section" aria-labelledby="titulo-mapa">
+      <div class="section-title">
+        <h2 id="titulo-mapa">MAPA</h2>
+      </div>
+
+      <div class="mapa-wrapper">
+        <iframe
+          title="Ubicación del Restaurante La Mimbre en Granada"
+          src="https://www.google.com/maps?cid=11474208141395681330&hl=es&gl=ES&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <a
+        class="btn-mapa"
+        href="https://www.google.com/maps?cid=11474208141395681330&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=es&gl=ES&source=embed"
+        target="_blank"
+        rel="noopener noreferrer">
+        📍 Abrir ubicación en Google Maps
+      </a>
+    </section>
+
+    <!-- CÓMO LLEGAR -->
+    <section class="como-llegar" aria-labelledby="titulo-como-llegar">
+      <h2 id="titulo-como-llegar">Cómo llegar</h2>
+
+      <p class="introduccion">
+        Si ya estás en el recinto de la Alhambra, el Restaurante está situado
+        justo detrás de las taquillas de entrada al complejo monumental,
+        también conocida como entrada del Generalife.
+        Si estás en la ciudad pero quieres ir al Restaurante La Mimbre,
+        tienes que saber que está ubicado en plenos Bosques de la Alhambra.
+        Para llegar te recomendamos algunas maneras:
+      </p>
+
+      <!-- ANDANDO -->
+      <article class="ruta">
+        <button class="ruta-titulo" type="button" aria-expanded="true">
+          <span>Andando (Rutas a pie)</span>
+          <span class="flecha" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="ruta-contenido">
+          <p>Es la mejor opción para disfrutar del entorno.</p>
+
+          <h3>Desde Plaza Nueva (centro):</h3>
+          <ul>
+            <li>Sube por la Cuesta de Gomérez.</li>
+            <li>
+              Continúa subiendo por la carretera Gomérez pasando junto
+              a la Puerta de Bibarrambla.
+            </li>
+            <li>
+              Al llegar al bosque de la Alhambra, continúa recto hasta
+              el final del paseo.
+            </li>
+            <li>
+              El restaurante lo encontrarás a la izquierda del camino.
+            </li>
+          </ul>
+
+          <h3>Desde el Realejo:</h3>
+          <ul>
+            <li>
+              Sube por el Paseo de las Palmas o la Cuesta del Caldero
+              para conectar con el Paseo del Generalife.
+            </li>
+            <li>El restaurante lo encontrarás a la izquierda del camino.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- AUTOBÚS -->
+      <article class="ruta">
+        <button class="ruta-titulo" type="button" aria-expanded="true">
+          <span>Autobús Urbano</span>
+          <span class="flecha" aria-expanded="true">
+            <span class="flecha" aria-hidden="true">⌄</span>
+          </span>
+        </button>
+
+        <div class="ruta-contenido">
+          <ul>
+            <li>
+              Las líneas C30 y C32 de Transportes Rober te dejarán muy cerca.
+            </li>
+            <li>
+              Sube en Plaza Nueva y bájate en la parada «Generalife».
+            </li>
+            <li>
+              Encontrarás el Restaurante justo en la parada del autobús.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- COCHE / TAXI -->
+      <article class="ruta">
+        <button class="ruta-titulo" type="button" aria-expanded="true">
+          <span>Coche / Taxi</span>
+          <span class="flecha" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="ruta-contenido">
+          <p>
+            Si prefieres no caminar, toma la <strong>Ronda Sur (A-395)</strong>
+            y sigue las indicaciones hacia el <strong>Párking de la Alhambra
+            (Parking 1. Parking Privado)</strong>.
+          </p>
+          <p>
+            Desde el aparcamiento, camina en dirección a la entrada del
+            Generalife (menos de 5 minutos).
+          </p>
+        </div>
+      </article>
+
+      <!-- TREN TURÍSTICO -->
+      <article class="ruta">
+        <button class="ruta-titulo" type="button" aria-expanded="true">
+          <span>Tren Turístico (Granada City Tour)</span>
+          <span class="flecha" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="ruta-contenido">
+          <p>
+            Puedes utilizar el
+            <a
+              href="https://granada.city-tour.com/es"
+              target="_blank"
+              rel="noopener noreferrer">
+              Tren Turístico
+            </a>
+            que recorre la ciudad y cuenta con parada en el área de la
+            Alhambra, ideal si estás haciendo un recorrido panorámico previo.
+          </p>
+
+          <p>
+            Encontrarás el Restaurante en la parada
+            <strong>«Generalife»</strong>.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ACCIONES -->
+    <section class="acciones" aria-label="Acciones de contacto">
+      <a class="boton boton-principal" href="tel:+34958222776">
+        📞 Llamar al restaurante
+      </a>
+
+      <a
+        class="boton boton-secundario"
+        href="https://wa.me/34628032009"
+        target="_blank"
+        rel="noopener noreferrer">
+        💬 Contactar por WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+</body>
+</html>

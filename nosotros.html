@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - La Mimbre Restaurante</title>
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos: inicio-styles.css (para el navbar unificado) y nosotros-styles.css (para las tarjetas) -->
+    <link rel="stylesheet" href="inicio-styles.css">
+    <link rel="stylesheet" href="nosotros-styles.css">
+
+    <!-- Scripts de funcionalidad -->
+    <script src="inicio-main.js" defer></script>
+    <script src="nosotros-main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
+    <header class="cabecera">
+        <nav class="nav">
+            <a href="index.html" class="logo-mini">LA MIMBRE</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">INICIO</a>
+                <a href="menu.html">MENÚ</a>
+                <a href="nosotros.html" class="active">NOSOTROS</a>
+                <a href="reserva.html">RESERVA</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenedor Principal de Nosotros -->
+    <div class="page-container">
+
+        <!-- Subtítulo Destacado -->
+        <header class="header-tagline">
+            <p>Desde 1890 en la Alhambra dando refrigerios a los caminantes</p>
+        </header>
+
+        <!-- Imagen Principal de la Terraza -->
+        <section class="hero-image-container">
+            <img src="img/imagen3.jpg" alt="Terraza de La Mimbre con vista a la Alhambra" class="hero-img">
+        </section>
+
+        <!-- Bloque 1: Resumen y Filosofía -->
+        <section class="card text-card intro-card">
+            <p class="cursive-text">
+                La Mimbre se redefine como un refugio gastronómico donde la herencia artesanal de Granada y la sofisticación orgánica convergen en un entorno histórico inigualable.
+            </p>
+            <p class="cursive-text">
+                Situado bajo la sombra del Generalife, el restaurante ofrece una experiencia sensorial que celebra la calma y el respeto por el producto local. La nueva propuesta no solo se vive a través del paladar, sino a través de una atmósfera de "lujo relajado" que invita al comensal a desconectar en un espacio donde los materiales naturales, la luz de la Alhambra y la tradición artesana se entrelazan para crear momentos inolvidables en el corazón del patrimonio granadino.
+            </p>
+        </section>
+
+        <!-- Bloque 2: Pregunta y Logo / Imagen central -->
+        <section class="card logo-card">
+            <h2 class="card-heading">¿Quieres probar una parte de la historia de granada?</h2>
+            <div class="logo-image-wrapper">
+                <img src="img/imagen2.jpg" alt="Logo La Mimbre Restaurante" class="logo-img">
+            </div>
+        </section>
+
+        <!-- Bloque 3: Historia Detallada -->
+        <section class="card text-card history-card">
+            <p class="cursive-text">
+                En el año 1890 nacía La Mimbre, negocio que después de cuatro generaciones continúa vivo, en la actualidad es el más antiguo de Granada con 130 años de historia.
+            </p>
+
+            <h3 class="subtitle-bold">PERÍODO 1890-1965</h3>
+
+            <p class="cursive-text">
+                La Familia Ballesteros montó un pequeño quiosco de madera sin más pretensiones que saciar la sed a los viajeros y terminó siendo punto de encuentro de artistas y bohemios que trasnochaban al frescor del Bosque Alhambreño.
+            </p>
+
+            <p class="cursive-text">
+                La familia nació y vivió en las Huertas del Generalife "Fuente Peña", en aquel entonces a finales del siglo XIX, los propietarios eran los "Marqueses de Campotejar"... gracias a las gestiones de un caballero que fue D. Enrique Gómez Colón, propietario de Villa Paulina concedieron levantar un quiosco en su propiedad.
+            </p>
+
+            <p class="cursive-text">
+                La Mimbre, era un ventorrillo de madera en el camino del cementerio, sin más deseo que atender a los viandantes, al poco tiempo, los asistentes a los entierros realizaban una parada al regreso, en la cual se detenían para tomar una copa y una copla ya lo decía:
+            </p>
+
+            <blockquote class="cursive-text quote">
+                "El que va a un entierro y no bebe sino el suyo viene de camino".
+            </blockquote>
+
+            <p class="cursive-text">
+                Durante esta época fue muy conocido el abuelo, al cual le llamaban "Manolico" o "Manolico de la Mimbre", una persona de ingenio, afable y simpática a manos llenas, le gustaba tertuliar con artistas, bohemios, escritores, políticos, turistas y con los paisanos...
+            </p>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

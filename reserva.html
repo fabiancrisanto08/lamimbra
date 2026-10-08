@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - La Mimbre Restaurante</title>
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos base del Navbar y estilos específicos de reservas -->
+    <link rel="stylesheet" href="inicio-styles.css">
+    <link rel="stylesheet" href="reservas-styles.css">
+
+    <!-- JS del menú hamburguesa unificado -->
+    <script src="inicio-main.js" defer></script>
+</head>
+<body>
+
+    <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
+    <header class="cabecera">
+        <nav class="nav">
+            <a href="index.html" class="logo-mini">LA MIMBRE</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">INICIO</a>
+                <a href="menu.html">MENÚ</a>
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="reserva.html" class="active">RESERVA</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+
+        <!-- Título Principal -->
+        <h1 class="title-reservas gsap-title">RESERVAS</h1>
+
+        <!-- Formulario de Reservas -->
+        <form id="reservationForm" class="reservation-form">
+            
+            <div class="form-grid">
+                <!-- Campo Fecha -->
+                <div class="form-group gsap-reveal">
+                    <label for="fecha">Fechas:</label>
+                    <div class="input-wrapper">
+                        <input type="date" id="fecha" class="animated-input" required>
+                        <i class="fa-regular fa-calendar-days input-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Campo Horario -->
+                <div class="form-group gsap-reveal">
+                    <label for="horario">Horario:</label>
+                    <div class="input-wrapper">
+                        <select id="horario" class="animated-input" required>
+                            <option value="" disabled selected hidden>Selecciona una hora</option>
+                            <option value="13:30">13:30 h</option>
+                            <option value="14:00">14:00 h</option>
+                            <option value="14:30">14:30 h</option>
+                            <option value="20:30">20:30 h</option>
+                            <option value="21:00">21:00 h</option>
+                            <option value="21:30">21:30 h</option>
+                        </select>
+                        <i class="fa-regular fa-clock input-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Campo Comensales -->
+                <div class="form-group gsap-reveal">
+                    <label for="comensales">Comensales:</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="comensales" class="animated-input" min="1" max="20" placeholder="Número de comensales" required>
+                        <i class="fa-solid fa-user input-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Campo Teléfono -->
+                <div class="form-group gsap-reveal">
+                    <label for="telefono">Teléfono:</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="telefono" class="animated-input" placeholder="Tu número de teléfono" required>
+                        <i class="fa-solid fa-phone input-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Campo Correo Electrónico -->
+                <div class="form-group full-width gsap-reveal">
+                    <label for="email">Correo electrónico:</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" class="animated-input" placeholder="tu.correo@ejemplo.com" required>
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campo Observaciones -->
+            <div class="form-group full-width gsap-reveal">
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" class="animated-input" rows="4"></textarea>
+            </div>
+
+            <!-- Política de Privacidad -->
+            <div class="privacy-card gsap-reveal">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="privacy" required>
+                    <span class="checkmark"></span>
+                    <span class="privacy-text">
+                        La Mimbre Restaurante S.L. <strong>Finalidad:</strong> Gestionar su reserva de mesa, enviarle la confirmación y avisarle de cualquier incidencia. <strong>Legitimación:</strong> Ejecución del servicio de reserva y consentimiento del usuario. <strong>Destinatarios:</strong> No se cederán datos a terceros, salvo obligación legal o proveedores técnicos necesarios para el funcionamiento de la web. <strong>Derechos:</strong> Puedes acceder, rectificar, limitar y suprimir tus datos enviando un email a info@lamimbrerestaurante.es. Más información: Consulta nuestra Política de Privacidad y Condiciones de Reserva. <a href="#" class="privacy-link">Política de privacidad</a>
+                    </span>
+                </label>
+            </div>
+
+            <!-- Botón de Envío y Mensaje de Éxito -->
+            <div class="submit-card gsap-reveal">
+                <div class="submit-action-area">
+                    <button type="submit" class="btn-submit" id="btnSubmit">
+                        <span class="btn-text">Solicitar reserva</span>
+                        <i class="fa-solid fa-spinner fa-spin btn-spinner" style="display: none;"></i>
+                    </button>
+
+                    <!-- Mensaje de confirmación -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <i class="fa-solid fa-circle-check success-icon"></i>
+                        <div class="success-text-content">
+                            <p class="success-main-text">¡Genial! Ya hemos separado tu cita a <strong>La Mimbre Restaurante</strong>.</p>
+                            <p class="success-sub-text">Hemos enviado el voucher y comprobante de validación a tu correo electrónico: <span id="confirmedEmail" class="email-highlight"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- Imagen del salón con ScrollTrigger -->
+        <div class="restaurant-image-container gsap-scroll-img">
+            <img src="assets/salon-restaurante.jpg" alt="Interior del restaurante La Mimbre" class="restaurant-img">
+        </div>
+
+    </div>
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- JavaScript Principal de Reservas -->
+    <script src="reservas-main.js"></script>
+</body>
+</html>

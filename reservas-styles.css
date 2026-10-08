@@ -1,0 +1,319 @@
+/* --- Variables globales --- */
+:root {
+    --bg-color: #d1d5d1;
+    --card-bg: #d9dcd9;
+    --text-color: #5d5d5d;
+    --border-color: #a8aca8;
+    --green-accent: #155d27;
+    --green-success-bg: #e8f5e9;
+    --green-success-border: #81c784;
+    --green-success-text: #1b5e20;
+    --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.12);
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* --- Contenedor Principal --- */
+.main-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Título Reservas --- */
+.title-reservas {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 2.8rem;
+    color: #838883;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    will-change: transform, opacity;
+}
+
+/* --- Formulario --- */
+.reservation-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    will-change: transform, opacity;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #505450;
+    transition: color 0.3s ease;
+}
+
+/* Inputs, Selects y Textareas con Transiciones */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+textarea {
+    width: 100%;
+    background-color: #dcdfdc;
+    border: 1.5px solid #a3a8a3;
+    border-radius: 20px;
+    padding: 12px 45px 12px 18px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1rem;
+    color: #4a4d4a;
+    box-shadow: var(--shadow-card);
+    outline: none;
+    appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+textarea:focus {
+    border-color: var(--green-accent);
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(21, 93, 39, 0.18);
+}
+
+textarea {
+    border-radius: 20px;
+    resize: vertical;
+    padding: 15px;
+}
+
+.input-wrapper input::placeholder {
+    color: #7b807b;
+    font-style: italic;
+}
+
+.input-icon {
+    position: absolute;
+    right: 18px;
+    font-size: 1.3rem;
+    color: #526372;
+    pointer-events: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.input-wrapper input:focus ~ .input-icon,
+.input-wrapper select:focus ~ .input-icon {
+    color: var(--green-accent);
+}
+
+/* --- Política de Privacidad --- */
+.privacy-card {
+    background-color: var(--card-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: var(--shadow-card);
+    will-change: transform, opacity;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 2px solid #6b706b;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+    background-color: #e5e8e5;
+    transition: all 0.3s ease;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--green-accent);
+    border-color: var(--green-accent);
+    transform: scale(1.1);
+}
+
+.checkbox-container input:checked ~ .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.privacy-text {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #444744;
+    text-align: justify;
+}
+
+.privacy-link {
+    color: var(--green-accent);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* --- Botón y Mensaje de Éxito --- */
+.submit-card {
+    background-color: var(--card-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    will-change: transform, opacity;
+}
+
+.submit-action-area {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.btn-submit {
+    background-color: #dcdfdc;
+    border: 1.5px solid #a3a8a3;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #2b2b2b;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mensaje de confirmación */
+.success-message {
+    width: 100%;
+    background-color: var(--green-success-bg);
+    border: 1.5px solid var(--green-success-border);
+    border-radius: 15px;
+    padding: 15px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.success-icon {
+    font-size: 1.8rem;
+    color: var(--green-success-text);
+    margin-top: 2px;
+}
+
+.success-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.success-main-text {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: var(--green-success-text);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.success-sub-text {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #2e7d32;
+    line-height: 1.4;
+}
+
+.email-highlight {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* --- Imagen del salón --- */
+.restaurant-image-container {
+    width: 100%;
+    margin-top: 35px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    will-change: transform, opacity;
+}
+
+.restaurant-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}

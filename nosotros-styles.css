@@ -1,0 +1,130 @@
+/* ==========================================
+   LA MIMBRE - NOSOTROS STYLES
+   Archivo: nosotros-styles.css
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #5d2d0c; /* Fondo marrón cálido */
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* Contenedor central tipo columna para las tarjetas */
+.page-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* Subtítulo / Tagline */
+.header-tagline {
+  background-color: #3d1c06;
+  color: #ffffff;
+  width: 95%;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen Principal (Hero) */
+.hero-image-container {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #d1d1d1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Tarjetas con fondo Gris Claro */
+.card {
+  background-color: #d8d8d8;
+  width: 100%;
+  border-radius: 20px;
+  padding: 22px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tipografía manuscrita/cursiva */
+.cursive-text {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #2b2b2b;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.cursive-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Tarjeta del Logo / Pregunta */
+.logo-card {
+  text-align: center;
+}
+
+.card-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  text-transform: lowercase;
+}
+
+.card-heading::first-letter {
+  text-transform: uppercase;
+}
+
+.logo-image-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Subtítulos e historia */
+.subtitle-bold {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  margin: 14px 0 8px 0;
+  text-align: left;
+}
+
+.quote {
+  text-align: center;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 0 10px;
+}
