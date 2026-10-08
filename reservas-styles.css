@@ -317,3 +317,37 @@ textarea {
         grid-column: span 1;
     }
 }
+
+/* ---------- NAVEGACIÓN ---------- */
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 0;
+    background: transparent;
+    width: 100%; /* <--- AÑADIR ESTA LÍNEA: Obliga al header a ocupar el 100% del ancho */
+}
+
+.nav {
+    width: min(90%, 1050px); /* Mantendrá los 1050px máximos idénticos a index.html */
+    margin: 0 auto;
+    min-height: 54px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #eeeeee;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
+}

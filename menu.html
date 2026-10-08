@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - La Mimbre Restaurante</title>
+    
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos: inicio-styles.css (navbar unificado) y menu-styles.css (carta de platos) -->
+    <link rel="stylesheet" href="inicio-styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+
+    <!-- Scripts de funcionalidad -->
+    <script src="inicio-main.js" defer></script>
+    <script src="menu-main.js" defer></script>
+</head>
+<body>
+
+    <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
+    <header class="cabecera">
+        <nav class="nav">
+            <a href="index.html" class="logo-mini">LA MIMBRE</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">INICIO</a>
+                <a href="menu.html" class="active">MENÚ</a>
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="reserva.html">RESERVA</a>
+                <a href="contacto.html">CONTACTO</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="menu-container">
+
+        <!-- Decoración Hojas Oliva Superior -->
+        <div class="leaf-bg leaf-top-right"></div>
+        <div class="leaf-bg leaf-mid-left"></div>
+
+        <!-- CONTENEDOR EN REJILLA (SECCIONES LADO A LADO EN PORTÁTIL) -->
+        <div class="menu-grid">
+
+            <!-- SECCIÓN: ENTRANTES -->
+            <section class="menu-section">
+                <div class="section-title">
+                    <h1>MENÚ</h1>
+                    <h2>Entrantes</h2>
+                </div>
+
+                <div class="dish-list">
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/plato1.jpg" alt="Sopa de Picadillo" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Sopa de Picadillo</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Gazpacho con picadillo de hortalizas.jpg" alt="Gazpacho con picadillo" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Gazpacho con picadillo de hortalizas</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Sopa Andalusí.jpg" alt="Sopa Andalusí" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Sopa Andalusí <span class="subtitle">Especialidad de la Casa</span></h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/jamoon cerrano.jpg" alt="Jamón Serrano de Trevélez" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Jamón Serrano de Trevélez Alpujarras Cortado a Cuchillo (100 gr.)</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Queso Curado Boffard reserva etiqueta roja (125 gr.).jpg" alt="Queso Curado Boffard" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Queso Curado Boffard reserva etiqueta roja (125 gr.)</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Jamón Serrano con Melón.jpg" alt="Jamón Serrano con Melón" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Jamón Serrano con Melón</h3>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: PRINCIPAL -->
+            <section class="menu-section">
+                <div class="section-title">
+                    <h1>MENÚ</h1>
+                    <h2>Principal</h2>
+                </div>
+
+                <div class="dish-list">
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Entrecot de ternera a la plancha acompañado de patatas fritas.jpg" alt="Entrecot de ternera" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Entrecot de ternera a la plancha acompañado de patatas fritas</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Puntas de solomillo de cerdo a la Miel de Romero.jpg" alt="Puntas de solomillo" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Puntas de solomillo de cerdo a la Miel de Romero</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Pechugas de pollo a la plancha acompañado de Arroz Nazarí.jpg" alt="Pechugas de pollo" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Pechugas de pollo a la plancha acompañado de Arroz Nazarí</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Chuletillas de cordero lechal acompañado de cous-cous con cebolla caramelizada.jpg" alt="Chuletillas de cordero" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Chuletillas de cordero lechal acompañado de cous-cous con cebolla caramelizada</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Calamaritos fritos.jpg" alt="Calamaritos fritos" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Calamaritos fritos</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Salmón a la plancha.jpg" alt="Salmón a la plancha" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Salmón a la plancha</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Bacalao frito con tomate.jpg" alt="Bacalao frito" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Bacalao frito con tomate</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/Choto -cabrito- al Ajillo en salsa.jpg" alt="Choto al ajillo" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Choto -cabrito- al Ajillo en salsa</h3>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: POSTRES -->
+            <section class="menu-section">
+                <div class="section-title">
+                    <h1>MENÚ</h1>
+                    <h2>Postres</h2>
+                </div>
+
+                <div class="dish-list">
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/piononos.jpg" alt="Piononos Casa Ysla" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Piononos “Casa Ysla” con helado de Leche Merengada</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/flan.jpg" alt="Flan casero" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Flan casero de huevo con nata</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/tarta-queso.jpg" alt="Tarta de queso" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Tarta de queso con mermelada de frutos rojos</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/sorbete.jpg" alt="Sorbete de limón" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Sorbete de limón al cava <span class="subtitle">Especialidad de la Casa</span></h3>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: BEBIDAS -->
+            <section class="menu-section">
+                <div class="section-title">
+                    <h1>MENÚ</h1>
+                    <h2>Bebidas</h2>
+                </div>
+
+                <div class="dish-list">
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/vino.jpg" alt="Vino tinto" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Vino Tinto Rioja Crianza (Copa / Botella)</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/cerveza.jpg" alt="Cerveza Alhambra" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Cerveza Alhambra Reserva 1925</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/agua.jpg" alt="Agua mineral" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Agua Mineral con o sin gas (50 cl)</h3>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <div class="dish-img-wrapper">
+                            <img src="img/refrescos.jpg" alt="Refrescos" class="dish-img">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Refrescos y Zumos variados</h3>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div> <!-- /menu-grid -->
+
+    </main>
+
+</body>
+</html>
