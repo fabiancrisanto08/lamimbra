@@ -45,7 +45,7 @@ body {
     transition: max-width 0.3s ease, padding 0.3s ease;
 }
 
-/* Disposición vertical predeterminada para móvil */
+
 .menu-grid {
     display: flex;
     flex-direction: column;
@@ -139,7 +139,7 @@ body {
 .leaf-top-right {
     top: 10px;
     right: -20px;
-    background-image: url('https://png.pngtree.com/png-clipart/20220111/ourmid/pngtree-hand-drawn-olive-branch-png-image_4152773.png');
+    background-image: url('img\los olivos.jpg');
 }
 
 .leaf-mid-left {
@@ -154,13 +154,15 @@ body {
    ========================================================= */
 @media (min-width: 900px) {
     .menu-container {
-        max-width: 1100px; /* Se amplía el ancho en computadoras */
+        max-width: 1100px;
+        /* Se amplía el ancho en computadoras */
         padding: 40px 50px;
     }
 
     .menu-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Muestra los bloques en 2 columnas */
+        grid-template-columns: 1fr 1fr;
+        /* Muestra los bloques en 2 columnas */
         gap: 45px 40px;
         align-items: start;
     }
@@ -174,11 +176,13 @@ body {
     z-index: 1000;
     padding: 14px 0;
     background: transparent;
-    width: 100%; /* <--- AÑADIR ESTA LÍNEA: Obliga al header a ocupar el 100% del ancho */
+    width: 100%;
+    /* <--- AÑADIR ESTA LÍNEA: Obliga al header a ocupar el 100% del ancho */
 }
 
 .nav {
-    width: min(90%, 1050px); /* Mantendrá los 1050px máximos idénticos a index.html */
+    width: min(90%, 1050px);
+    /* Mantendrá los 1050px máximos idénticos a index.html */
     margin: 0 auto;
     min-height: 54px;
     padding: 0 25px;
