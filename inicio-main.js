@@ -134,3 +134,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const imagen = document.querySelector(".imagen-destacada img");
+
+if (imagen) {
+    window.addEventListener("scroll", () => {
+        const contenedor = imagen.parentElement;
+        const posicion = contenedor.getBoundingClientRect();
+
+        const movimiento = (window.innerHeight / 2 - posicion.top) * 0.15;
+
+        imagen.style.transform = `translateY(${movimiento}px)`;
+    });
+}
+const imagenHistoria = document.querySelector(".historia-imagen img");
+
+if (imagenHistoria) {
+    window.addEventListener("scroll", () => {
+        const contenedor = imagenHistoria.parentElement;
+        const posicion = contenedor.getBoundingClientRect();
+
+        const movimiento =
+            (window.innerHeight / 2 - posicion.top) * 0.15;
+
+        imagenHistoria.style.transform =
+            `translateY(${movimiento}px)`;
+    });
+}
