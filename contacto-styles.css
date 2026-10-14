@@ -5,11 +5,7 @@
 
 :root {
   --azul-fondo:  #2F3E53;
-  --azul-panel:  #2F3E53;
-  --dorado: #e6b978;
-  --dorado-claro: #f0c98d;
-  --azul-enlace: #2498d8;
-  --blanco: #ffffff;
+  --dorado: #DDB987;
   --sombra: rgba(0, 0, 0, 0.20);
 }
 
