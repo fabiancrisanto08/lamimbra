@@ -233,7 +233,6 @@ h2 {
 /* ---------- EQUIPO ---------- */
 
 .seccion equipo {
-.seccion equipo {
     background-color: var(--verde);
     margin-top: 30px;
     padding-top: 0;
@@ -242,14 +241,8 @@ h2 {
 }
 
 .equipo-contenido {
-<<<<<<< HEAD
     width: min(100%, 950px);
     margin: auto;
-=======
-    width: min(100% - 30px, 950px);
-    margin: 0 auto;
-
->>>>>>> 7cd41fc (Añadir efecto parallax a las imágenes)
     display: grid;
     grid-template-columns: 0.9fr 1.4fr;
     align-items: center;
@@ -351,16 +344,8 @@ h2 {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-<<<<<<< HEAD
     gap: 40px;
     align-items: start;
-=======
-    /* Crea 2 columnas de igual ancho */
-    gap: 40px;
-    /* Espacio horizontal entre el logo y el contacto */
-    align-items: start;
-    /* Alinea ambos bloques en el tope superior */
->>>>>>> 7cd41fc (Añadir efecto parallax a las imágenes)
 }
 
 .logo-footer {
@@ -435,10 +420,6 @@ h2 {
     .equipo-contenido,
     .footer-contenido {
         grid-template-columns: 1fr;
-<<<<<<< HEAD
-=======
-        /* Cambia a 1 sola columna en dispositivos móviles */
->>>>>>> 7cd41fc (Añadir efecto parallax a las imágenes)
         gap: 30px;
     }
 }
