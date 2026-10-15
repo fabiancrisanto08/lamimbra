@@ -4,15 +4,10 @@
    ========================================================= */
 
 :root {
-<<<<<<< HEAD
   --azul-fondo: #2F3E53;
   --dorado: #DDB987;
   --dorado-claro: #f0c98d;
   --azul-enlace: #2498d8;
-=======
-  --azul-fondo:  #2F3E53;
-  --dorado: #DDB987;
->>>>>>> 7772c8f0b1e383fd7a5dce664b2c5ea99a27043d
   --sombra: rgba(0, 0, 0, 0.20);
 }
 
