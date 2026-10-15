@@ -27,71 +27,35 @@ body {
     min-height: 100vh;
     width: 100%;
     padding-bottom: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ---------- NAVEGACIÓN UNIFICADA (ESTILO NOSOTROS) ---------- */
-
-.cabecera {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 14px 0;
-    background: transparent;
-    width: 100%;
+/* Modo Oscuro - Menú */
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --title-green: #81c784;
 }
 
-.nav {
-    width: min(90%, 1050px);
-    margin: 0 auto;
-    min-height: 54px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eeeeee;
-    border-radius: 12px;
-    box-shadow: var(--sombra);
-    position: relative;
+body.dark-mode .menu-container {
+    background-color: var(--card-bg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.logo-mini {
-    display: none;
+body.dark-mode .dish-name {
+    color: #ffffff;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    width: 100%;
+body.dark-mode .dish-name .subtitle {
+    color: #aaaaaa;
 }
 
-.nav-links a {
-    color: #111111;
-    text-decoration: none;
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 18px;
-    transition: 0.25s;
+body.dark-mode .section-title h2 {
+    color: #cccccc;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    transform: translateY(-2px);
-    color: #1d4d2b;
-}
-
-.menu-toggle {
-    display: none;
-    border: 0;
-    background: transparent;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* ---------- CONTENEDOR PRINCIPAL ---------- */
-
+/* Contenedor Principal de la Carta */
 .menu-container {
     max-width: 520px;
     width: 92%;
@@ -102,7 +66,7 @@ body {
     border-radius: 24px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: max-width 0.3s ease, padding 0.3s ease;
+    transition: max-width 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
 }
 
 .menu-grid {
@@ -111,8 +75,7 @@ body {
     gap: 35px;
 }
 
-/* ---------- TÍTULOS Y PLATOS ---------- */
-
+/* Títulos y Lista de Platos */
 .section-title {
     text-align: center;
     margin: 20px 0 25px 0;
@@ -207,50 +170,7 @@ body {
     background-image: url('https://png.pngtree.com/png-clipart/20220111/ourmid/pngtree-hand-drawn-olive-branch-png-image_4152773.png');
 }
 
-/* ---------- RESPONSIVO (MÓVIL Y PORTÁTIL) ---------- */
-
-@media (max-width: 600px) {
-    .nav {
-        position: relative;
-        min-height: 48px;
-        justify-content: space-between;
-        padding: 0 14px;
-    }
-
-    .logo-mini {
-        display: block;
-        color: #111111;
-        text-decoration: none;
-        font-family: Georgia, "Times New Roman", serif;
-        font-weight: bold;
-        font-style: italic;
-        font-size: 16px;
-    }
-
-    .menu-toggle {
-        display: block !important;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 55px;
-        left: 0;
-        right: 0;
-        padding: 15px;
-        flex-direction: column;
-        gap: 16px;
-        background-color: #eeeeee;
-        border-radius: 10px;
-        box-shadow: var(--sombra);
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        display: flex !important;
-    }
-}
-
+/* Responsivo Portátil (Grid 2 columnas) */
 @media (min-width: 900px) {
     .menu-container {
         max-width: 1100px;

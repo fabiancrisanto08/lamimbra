@@ -10,17 +10,44 @@
 }
 
 body {
-  background-color: #5d2d0c; /* Fondo marrón cálido */
+  background-color: #5d2d0c; /* Fondo marrón cálido original */
   font-family: 'Montserrat', sans-serif;
   color: #333333;
   min-height: 100vh;
   padding-bottom: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Contenedor Principal (Mobile First) */
+/* Modo Oscuro - Nosotros */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .header-tagline {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .cursive-text,
+body.dark-mode .card-heading,
+body.dark-mode .subtitle-bold {
+  color: #e0e0e0;
+}
+
+body.dark-mode .hero-image-container {
+  border-color: #333333;
+}
+
+/* Contenedor Principal */
 .page-container {
   width: 100%;
-  max-width: 500px; /* Ancho cómodo para vista móvil */
+  max-width: 500px;
   margin: 20px auto 0;
   display: flex;
   flex-direction: column;
@@ -30,7 +57,6 @@ body {
   transition: max-width 0.3s ease;
 }
 
-/* Subtítulo / Tagline (Permanece en la cima) */
 .header-tagline {
   background-color: #3d1c06;
   color: #ffffff;
@@ -41,9 +67,9 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Estructura de Bloques / Filas */
 .bloque-nosotros {
   width: 100%;
   display: flex;
@@ -51,7 +77,6 @@ body {
   gap: 20px;
 }
 
-/* Contenedor del elemento multimedia principal */
 .hero-image-container {
   width: 100%;
   border-radius: 20px;
@@ -69,7 +94,6 @@ body {
   object-fit: cover;
 }
 
-/* Tarjetas con fondo Gris Claro */
 .card {
   background-color: #d8d8d8;
   width: 100%;
@@ -79,9 +103,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
-/* Tipografía manuscrita/cursiva */
 .cursive-text {
   font-family: 'Georgia', 'Times New Roman', serif;
   font-style: italic;
@@ -96,7 +120,6 @@ body {
   margin-bottom: 0;
 }
 
-/* Tarjeta del Logo / Pregunta */
 .logo-card {
   text-align: center;
   align-items: center;
@@ -127,7 +150,6 @@ body {
   display: block;
 }
 
-/* Subtítulos e historia */
 .subtitle-bold {
   font-family: 'Cinzel', serif;
   font-weight: 700;
@@ -144,12 +166,9 @@ body {
   padding: 0 10px;
 }
 
-/* ==========================================
-   VISTA PC / DESKTOP (MEDIA QUERY)
-   ========================================== */
 @media (min-width: 900px) {
   .page-container {
-    max-width: 1100px; /* Se expande en escritorios */
+    max-width: 1100px;
     padding: 0 20px;
   }
 
@@ -160,12 +179,11 @@ body {
 
   .bloque-nosotros {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 Columnas simétricas */
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: stretch;
   }
 
-  /* Bloque 1: Imagen (Izquierda) - Texto (Derecha) */
   .imagen-texto .hero-image-container {
     order: 1;
   }
@@ -173,7 +191,6 @@ body {
     order: 2;
   }
 
-  /* Bloque 2: Texto (Izquierda) - Imagen (Derecha) */
   .texto-imagen .history-card {
     order: 1;
   }

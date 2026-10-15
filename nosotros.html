@@ -18,29 +18,41 @@
     <!-- Scripts de funcionalidad -->
     <script src="inicio-main.js" defer></script>
     <script src="nosotros-main.js" defer></script>
+
+    <!-- Scripts de modo oscuro e idioma -->
+    <script src="theme-lang.js" defer></script>
 </head>
 
 <body>
 
     <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
-    <header class="cabecera">
-        <nav class="nav">
-            <a href="index.html" class="logo-mini">LA MIMBRE</a>
+<header class="cabecera">
+    <nav class="nav">
+        <a href="index.html" class="logo-mini">LA MIMBRE</a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-                ☰
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="index.html">INICIO</a>
-                <a href="menu.html">MENÚ</a>
-                <a href="nosotros.html" class="active">NOSOTROS</a>
-                <a href="reserva.html">RESERVA</a>
-                <a href="contacto.html">CONTACTO</a>
+        <!-- BLOQUE QUE FALTA: Botón de Modo Oscuro e Idioma -->
+        <div class="nav-controls">
+            <button id="themeToggle" class="control-btn" aria-label="Cambiar tema">🌙</button>
+            <div class="lang-selector">
+                <button id="langEs" class="lang-btn active">ES</button>
+                <span>|</span>
+                <button id="langEn" class="lang-btn">EN</button>
             </div>
-        </nav>
-    </header>
+        </div>
 
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" data-i18n="nav.home">INICIO</a>
+            <a href="menu.html" data-i18n="nav.menu">MENÚ</a>
+            <a href="nosotros.html" data-i18n="nav.about">NOSOTROS</a>
+            <a href="reserva.html" data-i18n="nav.reservations">RESERVA</a>
+            <a href="contacto.html" data-i18n="nav.contact">CONTACTO</a>
+        </div>
+    </nav>
+</header>
     <!-- Contenedor Principal de Nosotros -->
     <div class="page-container">
 

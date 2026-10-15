@@ -13,32 +13,46 @@
   <!-- Scripts de la navegación unificada y de interacción de contacto -->
   <script src="inicio-main.js" defer></script>
   <script src="contacto-main.js" defer></script>
+
+  <!-- Scripts de modo oscuro e idioma -->
+  <script src="theme-lang.js" defer></script>
 </head>
 
 <body>
 
   <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
   <header class="cabecera">
-    <nav class="nav">
-      <a href="index.html" class="logo-mini">LA MIMBRE</a>
+      <nav class="nav">
+          <a href="index.html" class="logo-mini">LA MIMBRE</a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        ☰
-      </button>
+          <!-- Controles de Modo Oscuro e Idioma -->
+          <div class="nav-controls">
+              <button id="themeToggle" class="control-btn" aria-label="Cambiar tema">🌙</button>
+              <div class="lang-selector">
+                  <button id="langEs" class="lang-btn active">ES</button>
+                  <span>|</span>
+                  <button id="langEn" class="lang-btn">EN</button>
+              </div>
+          </div>
 
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">INICIO</a>
-        <a href="menu.html">MENÚ</a>
-        <a href="nosotros.html">NOSOTROS</a>
-        <a href="reserva.html">RESERVA</a>
-        <a href="contacto.html" class="active">CONTACTO</a>
-      </div>
-    </nav>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+              ☰
+          </button>
+
+          <div class="nav-links" id="navLinks">
+              <a href="index.html" data-i18n="nav.home">INICIO</a>
+              <a href="menu.html" data-i18n="nav.menu">MENÚ</a>
+              <a href="nosotros.html" data-i18n="nav.about">NOSOTROS</a>
+              <a href="reserva.html" data-i18n="nav.reservations">RESERVA</a>
+              <a href="contacto.html" class="active" data-i18n="nav.contact">CONTACTO</a>
+          </div>
+      </nav>
   </header>
 
+  <!-- ==================== CONTENEDOR PRINCIPAL ==================== -->
   <main class="contacto">
 
-    <!-- CABECERA DE SECCIÓN -->
+    <!-- LOGO DE LA SECCIÓN -->
     <header class="contacto-header">
       <img
         src="img/Logotipo elegante de La Mimbre.png"
@@ -159,9 +173,7 @@
       <article class="ruta">
         <button class="ruta-titulo" type="button" aria-expanded="true">
           <span>Autobús Urbano</span>
-          <span class="flecha" aria-expanded="true">
-            <span class="flecha" aria-hidden="true">⌄</span>
-          </span>
+          <span class="flecha" aria-hidden="true">⌄</span>
         </button>
 
         <div class="ruta-contenido">
