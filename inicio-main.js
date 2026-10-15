@@ -78,4 +78,53 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+<<<<<<< HEAD
 });
+=======
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add("mostrar");
+                    observador.unobserve(entrada.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    elementos.forEach((elemento) => {
+        elemento.classList.add("aparecer");
+        observador.observe(elemento);
+    });
+
+});
+
+const imagen = document.querySelector(".imagen-destacada img");
+
+if (imagen) {
+    window.addEventListener("scroll", () => {
+        const contenedor = imagen.parentElement;
+        const posicion = contenedor.getBoundingClientRect();
+
+        const movimiento = (window.innerHeight / 2 - posicion.top) * 0.15;
+
+        imagen.style.transform = `translateY(${movimiento}px)`;
+    });
+}
+const imagenHistoria = document.querySelector(".historia-imagen img");
+
+if (imagenHistoria) {
+    window.addEventListener("scroll", () => {
+        const contenedor = imagenHistoria.parentElement;
+        const posicion = contenedor.getBoundingClientRect();
+
+        const movimiento =
+            (window.innerHeight / 2 - posicion.top) * 0.15;
+
+        imagenHistoria.style.transform =
+            `translateY(${movimiento}px)`;
+    });
+}
+>>>>>>> 7cd41fc (Añadir efecto parallax a las imágenes)
