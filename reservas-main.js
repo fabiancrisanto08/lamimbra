@@ -1,6 +1,13 @@
+/* =========================================================
+   RESERVAS - LA MIMBRE RESTAURANTE
+   Archivo: reservas-main.js
+   ========================================================= */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Registrar el plugin ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
+    // Registrar el plugin ScrollTrigger de GSAP
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+    }
 
     // Selección de elementos
     const reservationForm = document.getElementById('reservationForm');
@@ -19,76 +26,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 1. ANIMACIÓN DE CARGA INICIAL (ENTRADA)
+    // 1. ANIMACIÓN DE CARGA INICIAL (SIN AFECTAR EL NAVBAR)
     // ==========================================
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.8 } });
+    if (typeof gsap !== 'undefined') {
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.8 } });
 
-    tl.from('.cabecera', { y: -30, opacity: 0 })
-      .from('.gsap-title', { y: -20, opacity: 0, scale: 0.95 }, '-=0.4')
-      .from('.gsap-reveal', { y: 25, opacity: 0, stagger: 0.1 }, '-=0.4');
-
+        tl.from('.gsap-title', { y: -20, opacity: 0, scale: 0.95 })
+          .from('.gsap-reveal', { y: 25, opacity: 0, stagger: 0.1 }, '-=0.4');
+    }
 
     // ==========================================
-    // 2. MICRO-INTERACCIONES EN CAMPOS
+    // 2. MICRO-INTERACCIONES EN CAMPOS DEL FORMULARIO
     // ==========================================
-    animatedInputs.forEach(input => {
-        const wrapper = input.closest('.input-wrapper');
-        const icon = wrapper ? wrapper.querySelector('.input-icon') : null;
+    if (typeof gsap !== 'undefined') {
+        animatedInputs.forEach(input => {
+            const wrapper = input.closest('.input-wrapper');
+            const icon = wrapper ? wrapper.querySelector('.input-icon') : null;
 
-        input.addEventListener('focus', () => {
-            gsap.to(input, {
-                scale: 1.02,
-                duration: 0.25,
-                ease: 'power2.out'
+            input.addEventListener('focus', () => {
+                gsap.to(input, { scale: 1.02, duration: 0.25, ease: 'power2.out' });
+                if (icon) {
+                    gsap.to(icon, { scale: 1.2, rotate: 10, duration: 0.25, ease: 'back.out(2)' });
+                }
             });
 
-            if (icon) {
-                gsap.to(icon, {
-                    scale: 1.2,
-                    rotate: 10,
-                    duration: 0.25,
-                    ease: 'back.out(2)'
-                });
-            }
-        });
-
-        input.addEventListener('blur', () => {
-            gsap.to(input, {
-                scale: 1,
-                duration: 0.25,
-                ease: 'power2.out'
+            input.addEventListener('blur', () => {
+                gsap.to(input, { scale: 1, duration: 0.25, ease: 'power2.out' });
+                if (icon) {
+                    gsap.to(icon, { scale: 1, rotate: 0, duration: 0.25, ease: 'power2.out' });
+                }
             });
 
-            if (icon) {
-                gsap.to(icon, {
-                    scale: 1,
-                    rotate: 0,
-                    duration: 0.25,
-                    ease: 'power2.out'
-                });
-            }
-        });
-
-        input.addEventListener('change', () => {
-            gsap.fromTo(input, 
-                { scale: 0.98 }, 
-                { scale: 1.02, duration: 0.15, yoyo: true, repeat: 1, ease: 'power1.inOut' }
-            );
-
-            if (icon) {
-                gsap.fromTo(icon,
-                    { scale: 1.3 },
-                    { scale: 1.2, duration: 0.2, ease: 'bounce.out' }
+            input.addEventListener('change', () => {
+                gsap.fromTo(input, 
+                    { scale: 0.98 }, 
+                    { scale: 1.02, duration: 0.15, yoyo: true, repeat: 1, ease: 'power1.inOut' }
                 );
-            }
+
+                if (icon) {
+                    gsap.fromTo(icon,
+                        { scale: 1.3 },
+                        { scale: 1.2, duration: 0.2, ease: 'bounce.out' }
+                    );
+                }
+            });
         });
-    });
-
+    }
 
     // ==========================================
-    // 3. ANIMACIONES INTERACTIVAS DEL BOTÓN DE ENVÍO
+    // 3. INTERACCIONES DEL BOTÓN DE ENVÍO
     // ==========================================
-    if (btnSubmit) {
+    if (btnSubmit && typeof gsap !== 'undefined') {
         btnSubmit.addEventListener('mouseenter', () => {
             gsap.to(btnSubmit, {
                 scale: 1.04,
@@ -120,26 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     // ==========================================
-    // 4. ANIMACIÓN CON SCROLLTRIGGER PARA LA IMAGEN DEL SALÓN
-    // ==========================================
-    gsap.from('.gsap-scroll-img', {
-        scrollTrigger: {
-            trigger: '.gsap-scroll-img',
-            start: 'top 85%',
-            toggleActions: 'play none none reverse'
-        },
-        y: 50,
-        opacity: 0,
-        scale: 0.92,
-        duration: 1,
-        ease: 'power2.out'
-    });
-
-
-    // ==========================================
-    // 5. ENVÍO DEL FORMULARIO Y CONFIRMACIÓN ANIMADA
+    // 4. ENVÍO Y CONFIRMACIÓN DEL FORMULARIO
     // ==========================================
     if (reservationForm) {
         reservationForm.addEventListener('submit', (e) => {
@@ -159,10 +129,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (confirmedEmail) confirmedEmail.textContent = emailValue;
                 if (successMessage) successMessage.style.display = 'flex';
 
-                gsap.fromTo(successMessage, 
-                    { opacity: 0, y: -15, scale: 0.95 },
-                    { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }
-                );
+                if (typeof gsap !== 'undefined') {
+                    gsap.fromTo(successMessage, 
+                        { opacity: 0, y: -15, scale: 0.95 },
+                        { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }
+                    );
+                }
 
                 if (successMessage) successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   LA MIMBRE - INTERACTIVIDAD Y NAVEGACIÓN
+   LA MIMBRE - INTERACTIVIDAD Y NAVEGACIÓN UNIFICADA
    Archivo: inicio-main.js
    ========================================================= */
 
@@ -12,20 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.getElementById("navLinks");
 
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
 
-            // Cambia el icono entre ☰ y ✕
-            if (navLinks.classList.contains("active")) {
-                menuToggle.textContent = "✕";
-                menuToggle.setAttribute("aria-label", "Cerrar menú");
-            } else {
-                menuToggle.textContent = "☰";
-                menuToggle.setAttribute("aria-label", "Abrir menú");
-            }
+        // Evento principal para abrir / cerrar al hacer clic en el botón ☰ / ✕
+        menuToggle.addEventListener("click", (evento) => {
+            evento.stopPropagation();
+            const estaAbierto = navLinks.classList.toggle("active");
+
+            // Alterna el icono y la accesibilidad
+            menuToggle.textContent = estaAbierto ? "✕" : "☰";
+            menuToggle.setAttribute("aria-label", estaAbierto ? "Cerrar menú" : "Abrir menú");
         });
 
-        // Cierra el menú al hacer clic en cualquier enlace
+        // Cierra el menú desplegable automáticamente al hacer clic en cualquier enlace
         navLinks.querySelectorAll("a").forEach((enlace) => {
             enlace.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -33,10 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuToggle.setAttribute("aria-label", "Abrir menú");
             });
         });
+
+        // Cierra el menú al hacer clic en cualquier lugar fuera de la barra de navegación
+        document.addEventListener("click", (evento) => {
+            if (!menuToggle.contains(evento.target) && !navLinks.contains(evento.target)) {
+                if (navLinks.classList.contains("active")) {
+                    navLinks.classList.remove("active");
+                    menuToggle.textContent = "☰";
+                    menuToggle.setAttribute("aria-label", "Abrir menú");
+                }
+            }
+        });
     }
 
     // ======================================================
-    // 2. AÑO AUTOMÁTICO DEL FOOTER
+    // 2. AÑO AUTOMÁTICO EN EL FOOTER
     // ======================================================
     const anio = document.getElementById("anio");
     if (anio) {
@@ -44,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ======================================================
-    // 3. ANIMACIÓN SUAVE AL HACER SCROLL (OPCIONAL)
+    // 3. ANIMACIÓN SUAVE EN SCROLL (SI EXISTEN ELEMENTOS)
     // ======================================================
-    const elementos = document.querySelectorAll(
+    const elementosAparecer = document.querySelectorAll(
         ".contenido-centro, .galeria-platos, .equipo-contenido, .cita, .historia"
     );
 
-    if (elementos.length > 0) {
+    if (elementosAparecer.length > 0) {
         const observador = new IntersectionObserver(
             (entradas) => {
                 entradas.forEach((entrada) => {
@@ -63,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { threshold: 0.12 }
         );
 
-        elementos.forEach((elemento) => {
+        elementosAparecer.forEach((elemento) => {
             elemento.classList.add("aparecer");
             observador.observe(elemento);
         });

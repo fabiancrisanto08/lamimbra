@@ -11,6 +11,7 @@
     --border-radius: 20px;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
+    --sombra: 0 3px 8px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -23,19 +24,78 @@ body {
     background-color: var(--bg-color);
     font-family: var(--font-heading);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
     min-height: 100vh;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* ---------- NAVEGACIÓN UNIFICADA (ESTILO NOSOTROS) ---------- */
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 0;
+    background: transparent;
     width: 100%;
 }
 
-/* Contenedor Principal de la Carta (Mobile First) */
+.nav {
+    width: min(90%, 1050px);
+    margin: 0 auto;
+    min-height: 54px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    position: relative;
+}
+
+.logo-mini {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #111111;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    transform: translateY(-2px);
+    color: #1d4d2b;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
+
 .menu-container {
     max-width: 520px;
     width: 92%;
-    margin: 20px auto;
+    margin: 20px auto 0;
     background-color: #ffffff;
     padding: 30px 25px;
     position: relative;
@@ -45,14 +105,14 @@ body {
     transition: max-width 0.3s ease, padding 0.3s ease;
 }
 
-/* Disposición vertical predeterminada para móvil */
 .menu-grid {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
-/* Títulos de Sección */
+/* ---------- TÍTULOS Y PLATOS ---------- */
+
 .section-title {
     text-align: center;
     margin: 20px 0 25px 0;
@@ -73,7 +133,6 @@ body {
     margin-top: 5px;
 }
 
-/* Lista de Platos */
 .dish-list {
     display: flex;
     flex-direction: column;
@@ -125,7 +184,6 @@ body {
     font-style: italic;
 }
 
-/* Elementos Decorativos */
 .leaf-bg {
     position: absolute;
     width: 120px;
@@ -149,53 +207,60 @@ body {
     background-image: url('https://png.pngtree.com/png-clipart/20220111/ourmid/pngtree-hand-drawn-olive-branch-png-image_4152773.png');
 }
 
-/* =========================================================
-   ADAPTACIÓN PARA PORTÁTIL / PANTALLAS GRANDES (GRID 2 COLUMNAS)
-   ========================================================= */
+/* ---------- RESPONSIVO (MÓVIL Y PORTÁTIL) ---------- */
+
+@media (max-width: 600px) {
+    .nav {
+        position: relative;
+        min-height: 48px;
+        justify-content: space-between;
+        padding: 0 14px;
+    }
+
+    .logo-mini {
+        display: block;
+        color: #111111;
+        text-decoration: none;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        flex-direction: column;
+        gap: 16px;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        box-shadow: var(--sombra);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+}
+
 @media (min-width: 900px) {
     .menu-container {
-        max-width: 1100px; /* Se amplía el ancho en computadoras */
+        max-width: 1100px;
         padding: 40px 50px;
     }
 
     .menu-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Muestra los bloques en 2 columnas */
+        grid-template-columns: 1fr 1fr;
         gap: 45px 40px;
         align-items: start;
     }
-}
-
-/* ---------- NAVEGACIÓN ---------- */
-
-.cabecera {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 14px 0;
-    background: transparent;
-    width: 100%; /* <--- AÑADIR ESTA LÍNEA: Obliga al header a ocupar el 100% del ancho */
-}
-
-.nav {
-    width: min(90%, 1050px); /* Mantendrá los 1050px máximos idénticos a index.html */
-    margin: 0 auto;
-    min-height: 54px;
-    padding: 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #eeeeee;
-    border-radius: 12px;
-    box-shadow: var(--sombra);
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    width: 100%;
 }

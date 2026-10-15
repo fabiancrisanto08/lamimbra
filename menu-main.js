@@ -4,7 +4,7 @@
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Registra en consola el plato seleccionado al hacer clic
+    // Registra en consola el plato seleccionado
     const dishCards = document.querySelectorAll('.dish-card');
 
     dishCards.forEach(card => {
@@ -13,12 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Plato seleccionado: ${dishName}`);
         });
     });
-});
 
-gsap.from('.menu-section', {
-    duration: 1,
-    opacity: 0,
-    y: 100,
-    stagger: 0.1,
-    ease: 'elastic.out(1, 0.3)'
+    // Animación de entrada con GSAP protegida
+    if (typeof gsap !== 'undefined') {
+        gsap.from('.menu-section', {
+            duration: 1,
+            opacity: 0,
+            y: 60,
+            stagger: 0.15,
+            ease: 'power2.out'
+        });
+    }
 });
