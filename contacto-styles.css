@@ -158,11 +158,6 @@ h3 {
   cursor: pointer;
 }
 
-.flecha {
-  font-size: 25px;
-  transition: transform 0.2s ease;
-}
-
 .ruta-titulo[aria-expanded="false"] .flecha {
   transform: rotate(-90deg);
 }
