@@ -1,0 +1,25 @@
+/* Botón de sonido fijo arriba a la izquierda */
+#audio-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#audio-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}

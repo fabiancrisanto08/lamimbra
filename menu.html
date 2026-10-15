@@ -13,13 +13,19 @@
     <!-- Estilos: inicio-styles.css (navbar unificado) y menu-styles.css (carta de platos) -->
     <link rel="stylesheet" href="inicio-styles.css">
     <link rel="stylesheet" href="menu-styles.css">
+    <!--Estilos boton sonido-->
+    <link rel="stylesheet" href="botonAudioGlobal.css">
 
     <!-- Scripts de funcionalidad -->
     <script src="inicio-main.js" defer></script>
     <script src="menu-main.js" defer></script>
+    <!--conexion con audioGlobal.js-->
+    <script src="audioGlobal.js" defer></script>
 </head>
 <body>
-
+    <!-- Audio y Botón Global -->
+    <audio id="mi-audio" src="audio/audio1.mp3" preload="auto"></audio>
+    <button id="audio-btn">🔊</button>
     <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
     <header class="cabecera">
         <nav class="nav">

@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Mimbre - Restaurante</title>
     <link rel="stylesheet" href="inicio-styles.css">
+    <!--Estilos boton sonido-->
+    <link rel="stylesheet" href="botonAudioGlobal.css">
+
     <script src="inicio-main.js" defer=""></script>
+    <!--conexion con audioGlobal.js-->
+    <script src="audioGlobal.js" defer></script>
+    
 </head>
 
 <body>
-
+    <!-- Audio y Botón Global -->
+    <audio id="mi-audio" src="audio/audio1.mp3" preload="auto"></audio>
+    <button id="audio-btn">🔊</button>
     <!-- ==================== NAVEGACIÓN ==================== -->
     <header class="cabecera">
         <nav class="nav">
@@ -240,3 +248,5 @@
             © <span id="anio"></span> La Mimbre Restaurante. Todos los derechos reservados.
         </p>
     </footer>
+</body>
+</html>
