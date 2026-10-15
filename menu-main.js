@@ -14,3 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+gsap.from('.menu-section', {
+    duration: 1,
+    opacity: 0,
+    y: 100,
+    stagger: 0.1,
+    ease: 'elastic.out(1, 0.3)'
+});
