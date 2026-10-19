@@ -4,8 +4,8 @@
    ========================================================= */
 
 :root {
-    --bg-color: #f7f3f0;
-    --card-bg: #ffffff;
+    --bg-img : url('img/los olivos.jpg');
+    --card-bg: #ffffffdb;
     --text-color: #2b2b2b;
     --title-green: #3a5335;
     --border-radius: 20px;

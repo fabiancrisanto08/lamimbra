@@ -55,7 +55,7 @@
     {
       "nombre": "Calamaritos fritos",
       "imagen": "img/Calamaritos fritos.jpg",
-      "subtitulo": ""
+      "subtitulo": "Especialidad de la Casa"
     },
     {
       "nombre": "Salmón a la plancha",
@@ -65,7 +65,7 @@
     {
       "nombre": "Bacalao frito con tomate",
       "imagen": "img/Bacalao frito con tomate.jpg",
-      "subtitulo": ""
+      "subtitulo": "Especialidad de la Casa"
     },
     {
       "nombre": "Choto -cabrito- al Ajillo en salsa",
@@ -86,29 +86,29 @@
     },
     {
       "nombre": "Tarta de queso con mermelada de frutos rojos",
-      "imagen": "img/postre3.png",
+      "imagen": "img/postre 3.png",
       "subtitulo": ""
     },
     {
-      "nombre": "Sorbete de limón al cava",
-      "imagen": "img/postre4.png",
+      "nombre": "Cassata de «Los Italianos»",
+      "imagen": "img/postre 4.png",
       "subtitulo": "Especialidad de la Casa"
     }
   ],
   "bebidas": [
     {
       "nombre": "Vino Tinto Rioja Crianza (Copa / Botella)",
-      "imagen": "img/bebida1.png",
+      "imagen": "img/bebida1-vino.jpg",
       "subtitulo": ""
     },
     {
       "nombre": "Cerveza Alhambra Reserva 1925",
-      "imagen": "img/bebida2.png",
+      "imagen": "img/bebida2-cerveza.jpg",
       "subtitulo": ""
     },
     {
       "nombre": "Agua Mineral con o sin gas (50 cl)",
-      "imagen": "img/bebida3.png",
+      "imagen": "img/bebida3-agua.jpg",
       "subtitulo": ""
     },
     {
