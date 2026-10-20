@@ -1,5 +1,5 @@
 /* ==========================================
-   LA MIMBRE - NOSOTROS STYLES
+   LA MIMBRE - NOSOTROS STYLES (ESTÉTICA PREMIUM)
    Archivo: nosotros-styles.css
    ========================================== */
 
@@ -10,15 +10,17 @@
 }
 
 body {
-  background-color: #5d2d0c; /* Fondo marrón cálido original */
+  background-color: #1d4d2b; /* Fondo verde oliva característico */
   font-family: 'Montserrat', sans-serif;
-  color: #333333;
+  color: #2b2b2b;
   min-height: 100vh;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Modo Oscuro - Nosotros */
+/* ------------------------------------------
+   MODO OSCURO - NOSOTROS
+   ------------------------------------------ */
 body.dark-mode {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
@@ -26,12 +28,14 @@ body.dark-mode {
 
 body.dark-mode .header-tagline {
   background-color: #1e1e1e;
-  color: #e0e0e0;
+  border-color: #333333;
+  color: #d4af37;
 }
 
 body.dark-mode .card {
   background-color: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  border-color: #333333;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
 body.dark-mode .cursive-text,
@@ -40,80 +44,103 @@ body.dark-mode .subtitle-bold {
   color: #e0e0e0;
 }
 
+body.dark-mode .quote {
+  border-left-color: #d4af37;
+  color: #f0e6d2;
+}
+
 body.dark-mode .hero-image-container {
   border-color: #333333;
 }
 
-/* Contenedor Principal */
+/* ------------------------------------------
+   ESTRUCTURA PRINCIPAL Y CONTENEDOR
+   ------------------------------------------ */
 .page-container {
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto 0;
+  max-width: 600px;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
   align-items: center;
   padding: 0 15px;
   transition: max-width 0.3s ease;
 }
 
+/* Banner Superior */
 .header-tagline {
-  background-color: #3d1c06;
-  color: #ffffff;
+  background-color: #fcfbf7; /* Marrón cálido emblemático */
+  color: #2b2b2b;
   width: 100%;
   text-align: center;
-  padding: 12px 16px;
-  border-radius: 12px;
-  font-size: 0.9rem;
+  padding: 16px 20px;
+  border-radius: 18px;
+  font-size: 0.95rem;
   font-weight: 600;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
 .bloque-nosotros {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
+/* ------------------------------------------
+   MARCO DE VIDEO / IMAGEN HERO
+   ------------------------------------------ */
 .hero-image-container {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 28px;
   overflow: hidden;
-  border: 3px solid #d1d1d1;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 3px solid #e2ded4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
 .hero-img,
 .hero-video {
   width: 100%;
   height: 100%;
-  min-height: 250px;
+  min-height: 280px;
   display: block;
   object-fit: cover;
 }
 
+/* ------------------------------------------
+   TARJETAS Y BLOQUES DE TEXTO
+   ------------------------------------------ */
 .card {
-  background-color: #d8d8d8;
+  background-color: #fcfbf7; /* Tono crema/blanco mármol elegante */
   width: 100%;
-  border-radius: 20px;
-  padding: 24px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 28px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  border: 1px solid rgba(29, 77, 43, 0.12);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cursive-text {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #2b2b2b;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: #333333;
   text-align: justify;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .cursive-text:last-child {
@@ -127,21 +154,18 @@ body.dark-mode .hero-image-container {
 
 .card-heading {
   font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  color: #1a1a1a;
-  margin-bottom: 15px;
-  text-transform: lowercase;
-}
-
-.card-heading::first-letter {
-  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: #1d4d2b;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .logo-image-wrapper {
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  max-width: 85%;
+  max-width: 80%;
   margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo-img {
@@ -153,34 +177,44 @@ body.dark-mode .hero-image-container {
 .subtitle-bold {
   font-family: 'Cinzel', serif;
   font-weight: 700;
-  font-size: 0.95rem;
-  color: #1a1a1a;
-  margin: 16px 0 8px 0;
-  text-align: left;
+  font-size: 1.05rem;
+  color: #1d4d2b;
+  margin: 22px 0 12px 0;
+  letter-spacing: 1px;
 }
 
 .quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #5e2f10; /* Color marrón de contraste */
   text-align: center;
-  font-weight: bold;
-  margin: 18px 0;
-  padding: 0 10px;
+  margin: 24px 0;
+  padding: 12px 20px;
+  border-left: 3px solid #1d4d2b;
+  background-color: rgba(29, 77, 43, 0.04);
+  border-radius: 0 14px 14px 0;
 }
 
+/* ------------------------------------------
+   RESPONSIVE - ESCRITORIO (REJILLA GRID)
+   ------------------------------------------ */
 @media (min-width: 900px) {
   .page-container {
-    max-width: 1100px;
+    max-width: 1150px;
     padding: 0 20px;
   }
 
   .header-tagline {
-    font-size: 1.1rem;
-    padding: 14px 20px;
+    font-size: 1.15rem;
+    padding: 18px 24px;
   }
 
   .bloque-nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 35px;
     align-items: stretch;
   }
 
@@ -191,10 +225,10 @@ body.dark-mode .hero-image-container {
     order: 2;
   }
 
-  .texto-imagen .history-card {
+  .texto-imagen .logo-card {
     order: 1;
   }
-  .texto-imagen .logo-card {
+  .texto-imagen .history-card {
     order: 2;
   }
 }

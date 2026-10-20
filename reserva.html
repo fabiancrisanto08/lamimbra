@@ -9,7 +9,7 @@
     <!-- Fuentes Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Estilos base del Navbar y estilos específicos de reservas -->
     <link rel="stylesheet" href="inicio-styles.css">
@@ -50,111 +50,114 @@
         </nav>
     </header>
 
-    <div class="main-container">
+    <!-- ==================== CONTENEDOR TIPO BLOQUE TARJETA ==================== -->
+    <main class="reserva-container">
+        <div class="reserva-card-block">
 
-        <!-- Título Principal -->
-        <h1 class="title-reservas gsap-title" data-i18n="booking.title">RESERVAS</h1>
+            <!-- Título Principal -->
+            <h1 class="title-reservas gsap-title" data-i18n="booking.title">RESERVAS</h1>
 
-        <!-- Formulario de Reservas -->
-        <form id="reservationForm" class="reservation-form">
-            
-            <div class="form-grid">
-                <!-- Campo Fecha -->
-                <div class="form-group gsap-reveal">
-                    <label for="fecha" data-i18n="booking.date">Fechas:</label>
-                    <div class="input-wrapper">
-                        <input type="date" id="fecha" class="animated-input" required>
-                        <i class="fa-regular fa-calendar-days input-icon"></i>
+            <!-- Formulario de Reservas -->
+            <form id="reservationForm" class="reservation-form">
+                
+                <div class="form-grid">
+                    <!-- Campo Fecha -->
+                    <div class="form-group gsap-reveal">
+                        <label for="fecha" data-i18n="booking.date">Fechas:</label>
+                        <div class="input-wrapper">
+                            <input type="date" id="fecha" class="animated-input" required>
+                            <i class="fa-regular fa-calendar-days input-icon"></i>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Campo Horario -->
-                <div class="form-group gsap-reveal">
-                    <label for="horario" data-i18n="booking.time">Horario:</label>
-                    <div class="input-wrapper">
-                        <select id="horario" class="animated-input" required>
-                            <option value="" disabled selected hidden data-i18n="booking.select_time">Selecciona una hora</option>
-                            <option value="13:30">13:30 h</option>
-                            <option value="14:00">14:00 h</option>
-                            <option value="14:30">14:30 h</option>
-                            <option value="20:30">20:30 h</option>
-                            <option value="21:00">21:00 h</option>
-                            <option value="21:30">21:30 h</option>
-                        </select>
-                        <i class="fa-regular fa-clock input-icon"></i>
+                    <!-- Campo Horario -->
+                    <div class="form-group gsap-reveal">
+                        <label for="horario" data-i18n="booking.time">Horario:</label>
+                        <div class="input-wrapper">
+                            <select id="horario" class="animated-input" required>
+                                <option value="" disabled selected hidden data-i18n="booking.select_time">Selecciona una hora</option>
+                                <option value="13:30">13:30 h</option>
+                                <option value="14:00">14:00 h</option>
+                                <option value="14:30">14:30 h</option>
+                                <option value="20:30">20:30 h</option>
+                                <option value="21:00">21:00 h</option>
+                                <option value="21:30">21:30 h</option>
+                            </select>
+                            <i class="fa-regular fa-clock input-icon"></i>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Campo Comensales -->
-                <div class="form-group gsap-reveal">
-                    <label for="comensales" data-i18n="booking.guests">Comensales:</label>
-                    <div class="input-wrapper">
-                        <input type="number" id="comensales" class="animated-input" min="1" max="20" placeholder="Número de comensales" data-i18n-placeholder="booking.guests_ph" required>
-                        <i class="fa-solid fa-user input-icon"></i>
+                    <!-- Campo Comensales -->
+                    <div class="form-group gsap-reveal">
+                        <label for="comensales" data-i18n="booking.guests">Comensales:</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="comensales" class="animated-input" min="1" max="20" placeholder="Número de comensales" data-i18n-placeholder="booking.guests_ph" required>
+                            <i class="fa-solid fa-user input-icon"></i>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Campo Teléfono -->
-                <div class="form-group gsap-reveal">
-                    <label for="telefono" data-i18n="booking.phone">Teléfono:</label>
-                    <div class="input-wrapper">
-                        <input type="tel" id="telefono" class="animated-input" placeholder="Tu número de teléfono" data-i18n-placeholder="booking.phone_ph" required>
-                        <i class="fa-solid fa-phone input-icon"></i>
+                    <!-- Campo Teléfono -->
+                    <div class="form-group gsap-reveal">
+                        <label for="telefono" data-i18n="booking.phone">Teléfono:</label>
+                        <div class="input-wrapper">
+                            <input type="tel" id="telefono" class="animated-input" placeholder="Tu número de teléfono" data-i18n-placeholder="booking.phone_ph" required>
+                            <i class="fa-solid fa-phone input-icon"></i>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Campo Correo Electrónico -->
-                <div class="form-group full-width gsap-reveal">
-                    <label for="email" data-i18n="booking.email">Correo electrónico:</label>
-                    <div class="input-wrapper">
-                        <input type="email" id="email" class="animated-input" placeholder="tu.correo@ejemplo.com" required>
-                        <i class="fa-solid fa-envelope input-icon"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Campo Observaciones -->
-            <div class="form-group full-width gsap-reveal">
-                <label for="observaciones" data-i18n="booking.notes">Observaciones:</label>
-                <textarea id="observaciones" class="animated-input" rows="4"></textarea>
-            </div>
-
-            <!-- Política de Privacidad -->
-            <div class="privacy-card gsap-reveal">
-                <label class="checkbox-container">
-                    <input type="checkbox" id="privacy" required>
-                    <span class="checkmark"></span>
-                    <span class="privacy-text" data-i18n="booking.privacy_text">
-                        La Mimbre Restaurante S.L. <strong>Finalidad:</strong> Gestionar su reserva de mesa, enviarle la confirmación y avisarle de cualquier incidencia. <strong>Legitimación:</strong> Ejecución del servicio de reserva y consentimiento del usuario. <strong>Destinatarios:</strong> No se cederán datos a terceros, salvo obligación legal o proveedores técnicos necesarios para el funcionamiento de la web. <strong>Derechos:</strong> Puedes acceder, rectificar, limitar y suprimir tus datos enviando un email a info@lamimbrerestaurante.es. Más información: Consulta nuestra Política de Privacidad y Condiciones de Reserva. <a href="#" class="privacy-link">Política de privacidad</a>
-                    </span>
-                </label>
-            </div>
-
-            <!-- Botón de Envío y Mensaje de Éxito -->
-            <div class="submit-card gsap-reveal">
-                <div class="submit-action-area">
-                    <button type="submit" class="btn-submit" id="btnSubmit">
-                        <span class="btn-text" data-i18n="booking.submit_btn">Solicitar reserva</span>
-                        <i class="fa-solid fa-spinner fa-spin btn-spinner" style="display: none;"></i>
-                    </button>
-
-                    <!-- Mensaje de confirmación -->
-                    <div id="successMessage" class="success-message" style="display: none;">
-                        <i class="fa-solid fa-circle-check success-icon"></i>
-                        <div class="success-text-content">
-                            <p class="success-main-text" data-i18n="booking.success_main">¡Genial! Ya hemos separado tu cita a La Mimbre Restaurante.</p>
-                            <p class="success-sub-text">
-                                <span data-i18n="booking.success_sub">Hemos enviado el voucher y comprobante de validación a tu correo electrónico:</span>
-                                <span id="confirmedEmail" class="email-highlight"></span>
-                            </p>
+                    <!-- Campo Correo Electrónico -->
+                    <div class="form-group full-width gsap-reveal">
+                        <label for="email" data-i18n="booking.email">Correo electrónico:</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" class="animated-input" placeholder="tu.correo@ejemplo.com" required>
+                            <i class="fa-solid fa-envelope input-icon"></i>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </form>
+                <!-- Campo Observaciones -->
+                <div class="form-group full-width gsap-reveal">
+                    <label for="observaciones" data-i18n="booking.notes">Observaciones:</label>
+                    <textarea id="observaciones" class="animated-input" rows="4"></textarea>
+                </div>
 
-    </div>
+                <!-- Política de Privacidad -->
+                <div class="privacy-card gsap-reveal">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="privacy" required>
+                        <span class="checkmark"></span>
+                        <span class="privacy-text" data-i18n="booking.privacy_text">
+                            La Mimbre Restaurante S.L. <strong>Finalidad:</strong> Gestionar su reserva de mesa, enviarle la confirmación y avisarle de cualquier incidencia. <strong>Legitimación:</strong> Ejecución del servicio de reserva y consentimiento del usuario. <strong>Destinatarios:</strong> No se cederán datos a terceros, salvo obligación legal o proveedores técnicos necesarios para el funcionamiento de la web. <strong>Derechos:</strong> Puedes acceder, rectificar, limitar y suprimir tus datos enviando un email a info@lamimbrerestaurante.es. Más información: Consulta nuestra Política de Privacidad y Condiciones de Reserva. <a href="#" class="privacy-link">Política de privacidad</a>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Botón de Envío y Mensaje de Éxito -->
+                <div class="submit-card gsap-reveal">
+                    <div class="submit-action-area">
+                        <button type="submit" class="btn-submit" id="btnSubmit">
+                            <span class="btn-text" data-i18n="booking.submit_btn">Solicitar reserva</span>
+                            <i class="fa-solid fa-spinner fa-spin btn-spinner" style="display: none;"></i>
+                        </button>
+
+                        <!-- Mensaje de confirmación -->
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <i class="fa-solid fa-circle-check success-icon"></i>
+                            <div class="success-text-content">
+                                <p class="success-main-text" data-i18n="booking.success_main">¡Genial! Ya hemos separado tu cita a La Mimbre Restaurante.</p>
+                                <p class="success-sub-text">
+                                    <span data-i18n="booking.success_sub">Hemos enviado el voucher y comprobante de validación a tu correo electrónico:</span>
+                                    <span id="confirmedEmail" class="email-highlight"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </main>
 
     <!-- GSAP & ScrollTrigger CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
