@@ -1,68 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Mimbre - Restaurante</title>
     <link rel="stylesheet" href="inicio-styles.css">
-    <script src="inicio-main.js" defer=""></script>
+    <script src="inicio-main.js" defer></script>
     <script src="theme-lang.js" defer></script>
 </head>
 
 <body>
 
     <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
-<header class="cabecera">
-    <nav class="nav">
-        <a href="index.html" class="logo-mini">LA MIMBRE</a>
+    <header class="cabecera">
+        <nav class="nav">
+            <a href="index.html" class="logo-mini">LA MIMBRE</a>
 
-        <!-- BLOQUE QUE FALTA: Botón de Modo Oscuro e Idioma -->
-        <div class="nav-controls">
-            <button id="themeToggle" class="control-btn" aria-label="Cambiar tema">🌙</button>
-            <div class="lang-selector">
-                <button id="langEs" class="lang-btn active">ES</button>
-                <span>|</span>
-                <button id="langEn" class="lang-btn">EN</button>
+            <div class="nav-controls">
+                <button id="themeToggle" class="control-btn" aria-label="Cambiar tema">🌙</button>
+                <div class="lang-selector">
+                    <button id="langEs" class="lang-btn active">ES</button>
+                    <span>|</span>
+                    <button id="langEn" class="lang-btn">EN</button>
+                </div>
             </div>
-        </div>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-            ☰
-        </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
 
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" data-i18n="nav.home">INICIO</a>
-            <a href="menu.html" data-i18n="nav.menu">MENÚ</a>
-            <a href="nosotros.html" data-i18n="nav.about">NOSOTROS</a>
-            <a href="reserva.html" data-i18n="nav.reservations">RESERVA</a>
-            <a href="contacto.html" data-i18n="nav.contact">CONTACTO</a>
-        </div>
-    </nav>
-</header>
-
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active" data-i18n="nav.home">INICIO</a>
+                <a href="menu.html" data-i18n="nav.menu">MENÚ</a>
+                <a href="nosotros.html" data-i18n="nav.about">NOSOTROS</a>
+                <a href="reserva.html" data-i18n="nav.reservations">RESERVA</a>
+                <a href="contacto.html" data-i18n="nav.contact">CONTACTO</a>
+            </div>
+        </nav>
+    </header>
 
     <main>
 
-        <!-- ==================== INICIO ==================== -->
+        <!-- ==================== INICIO / HERO ==================== -->
         <section class="hero" id="inicio">
-
-            <!-- Cambia esta imagen por tu logo -->
             <img src="img/Logo.png" alt="La Mimbre Restaurante" class="logo-principal">
-
-            <a href="reserva.html" class="btn btn-principal">
+            <a href="reserva.html" class="btn btn-principal" data-i18n="home.hero_btn">
                 RESERVA TU MESA
             </a>
         </section>
 
-
         <!-- ==================== NUESTROS PLATOS ==================== -->
         <section class="seccion platos" id="platos">
-
             <div class="contenido-centro">
-                <h2>NUESTROS PLATOS</h2>
-
-                <p>
+                <h2 data-i18n="home.dishes_title">NUESTROS PLATOS</h2>
+                <p data-i18n="home.dishes_desc">
                     Nuestros platos están elaborados siguiendo las recetas familiares
                     y adaptándolas a la actualidad culinaria. Nuestros productos son
                     de primera calidad y elaborados al día, todo nuestro pescado es
@@ -75,30 +67,23 @@
             </div>
 
             <div class="galeria-platos">
-
                 <img src="img/menu1.png" alt="Platos de La Mimbre" loading="lazy">
                 <img src="img/menu2.png" alt="Plato de La Mimbre" loading="lazy">
                 <img src="img/menu3.png" alt="Plato de La Mimbre" loading="lazy">
-
                 <img src="img/menu4.png" alt="Plato de La Mimbre" loading="lazy">
                 <img src="img/menu5.png" alt="Plato de La Mimbre" loading="lazy">
                 <img src="img/menu6.png" alt="Plato de La Mimbre" loading="lazy">
-
                 <img src="img/menu7.png" alt="Plato de La Mimbre" loading="lazy">
                 <img src="img/menu8.png" alt="Plato de La Mimbre" loading="lazy">
                 <img src="img/menu.png" alt="Plato de La Mimbre" loading="lazy">
-
             </div>
         </section>
 
-
         <!-- ==================== NUESTRO ENTORNO ==================== -->
         <section class="seccion entorno" id="nosotros">
-
             <div class="contenido-centro">
-                <h2>NUESTRO ENTORNO</h2>
-
-                <p>
+                <h2 data-i18n="home.env_title">NUESTRO ENTORNO</h2>
+                <p data-i18n="home.env_desc">
                     Como se puede ver tenemos el enorme privilegio de estar situados
                     en uno de los lugares más impresionantes y bonitos de la ciudad,
                     la Alhambra. El restaurante La Mimbre se sitúa justo en la entrada
@@ -114,45 +99,34 @@
 
             <div class="imagen-destacada">
                 <img src="img/LOGO2.png" alt="Exterior del restaurante La Mimbre">
-
-            
             </div>
-
         </section>
-
 
         <!-- ==================== NUESTRO EQUIPO ==================== -->
         <section class="seccion equipo">
-
             <div class="equipo-contenido">
-
                 <img src="img/EQUIPO.png" alt="Equipo de La Mimbre" class="foto-equipo" loading="lazy">
 
                 <div>
-                    <h2>NUESTRO EQUIPO</h2>
-
-                    <p>
+                    <h2 data-i18n="home.team_title">NUESTRO EQUIPO</h2>
+                    <p data-i18n="home.team_p1">
                         A lo largo de los años han trabajado en el Restaurante La Mimbre
                         mucha gente; familiares, amigos y personas que han pasado a formar
                         parte de la familia del restaurante.
                     </p>
-
-                    <p>
+                    <p data-i18n="home.team_p2">
                         Actualmente la 6ª generación del restaurante empieza a tomar las
                         riendas del negocio familiar acompañado de un maravilloso equipo
                         sin el que no se podría continuar con la labor que llevamos
                         desempeñando casi 150 años.
                     </p>
                 </div>
-
             </div>
         </section>
 
-
         <!-- ==================== CITA ==================== -->
         <section class="cita">
-
-            <blockquote>
+            <blockquote data-i18n="home.quote_text">
                 «Hoy he subido a la Mimbre, por la cuesta del Rey “Chico” mi mente se
                 abre al recuerdo, por los espacios perdidos. ¡Oh, adarves Alhivatas!,
                 del ciprés y el arrayán, del jazmín y del geranio, del castaño y del nogal.
@@ -167,53 +141,38 @@
             </blockquote>
 
             <div class="autor-cita">
-                 <img src="img/AMIGO.png" alt="Felix" class="avatar" loading="lazy">
-                <p>A mi amigo Félix afectuosamente</p>
-                <span>Atalfo Barroso Jiménez, Granada 2003</span>
+                <img src="img/AMIGO.png" alt="Felix" class="avatar" loading="lazy">
+                <p data-i18n="home.quote_dedication">A mi amigo Félix afectuosamente</p>
+                <span data-i18n="home.quote_author">Atalfo Barroso Jiménez, Granada 2003</span>
             </div>
-
         </section>
-
 
         <!-- ==================== HISTORIA ==================== -->
         <section class="historia">
-
             <div class="historia-imagen">
                 <img src="img/la mimbre BYN.png" alt="Historia de La Mimbre">
-
-                <h2>
+                <h2 data-i18n="home.history_banner">
                     DESDE 1890 EN LA ALHAMBRA COMPARTIENDO<br>
                     NUESTRA TRADICIÓN FAMILIAR EN LA MESA
                 </h2>
             </div>
-
-            
-
         </section>
-
-
-        <!-- ==================== RESERVA ==================== -->
-
 
     </main>
 
-
-   <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER ==================== -->
     <footer class="footer" id="contacto">
         <div class="footer-contenido">
-
-            <!-- Columna Izquierda: Logo e Imagen de Marca -->
             <div class="footer-marca">
                 <img src="img/Logo.png" alt="La Mimbre Restaurante" class="logo-footer">
-                <h2>Desde 1890 en la Alhambra compartiendo nuestra tradición familiar en la mesa</h2>
+                <h2 data-i18n="footer.tagline">Desde 1890 en la Alhambra compartiendo nuestra tradición familiar en la mesa</h2>
             </div>
 
-            <!-- Columna Derecha: Información de Contacto alineada a la altura del logo -->
             <div class="footer-contacto">
-                <h2>CONTÁCTANOS:</h2>
+                <h2 data-i18n="footer.contact_title">CONTÁCTANOS:</h2>
 
                 <p>
-                    Teléfono:
+                    <span data-i18n="footer.phone">Teléfono:</span>
                     <a href="tel:+34958227628">958 227 726</a> ·
                     <a href="tel:+34958268032">628 032 009</a>
                 </p>
@@ -225,7 +184,7 @@
                 </p>
 
                 <p>
-                    Dirección:
+                    <span data-i18n="footer.address">Dirección:</span>
                     <a href="https://www.google.com/maps/place/Restaurante+La+Mimbre/@37.1748555,-3.5858401,15.5z/data=!4m6!3m5!1s0xd71fcb6b7b103fb:0x9f3c9382fac8e032!8m2!3d37.1745194!4d-3.5850503!16s%2Fg%2F1tfzcjlc?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
                         P.º del Generalife S/N, Centro, 18009 Granada
                     </a>
@@ -239,17 +198,17 @@
                 </p>
 
                 <div class="redes">
-                    <a href="https://www.facebook.com/restaurantelamimbre" target="_blank" rel="noopener noreferrer" aria-label="Facebook"> <img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.facebook.com/restaurantelamimbre" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="img/facebook.png" alt="Facebook"></a>
                     <a href="https://www.instagram.com/mimbrerestaurante" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
-                    <a href="https://restaurantelamimbre.es/" target="_blank" rel="noopener noreferrer"   aria-label="Google"><img src="img/google.png" alt="Google"></a>
+                    <a href="https://restaurantelamimbre.es/" target="_blank" rel="noopener noreferrer" aria-label="Google"><img src="img/google.png" alt="Google"></a>
                 </div>
             </div>
-
         </div>
 
         <p class="copyright">
-            © <span id="anio"></span> La Mimbre Restaurante. Todos los derechos reservados.
+            © <span id="anio"></span> La Mimbre Restaurante. <span data-i18n="footer.rights">Todos los derechos reservados.</span>
         </p>
-        
     </footer>
+
 </body>
+</html>

@@ -11,57 +11,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Estilos: inicio-styles.css (navbar unificado) y nosotros-styles.css (tarjetas y grilla responsive) -->
+    <!-- Estilos: inicio-styles.css (navbar unificado) y nosotros-styles.css -->
     <link rel="stylesheet" href="inicio-styles.css">
     <link rel="stylesheet" href="nosotros-styles.css">
 
-    <!-- Scripts de funcionalidad -->
+    <!-- Scripts de funcionalidad unificada -->
     <script src="inicio-main.js" defer></script>
-    <script src="nosotros-main.js" defer></script>
-
-    <!-- Scripts de modo oscuro e idioma -->
     <script src="theme-lang.js" defer></script>
 </head>
 
 <body>
 
     <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
-<header class="cabecera">
-    <nav class="nav">
-        <a href="index.html" class="logo-mini">LA MIMBRE</a>
+    <header class="cabecera">
+        <nav class="nav">
+            <a href="index.html" class="logo-mini">LA MIMBRE</a>
 
-        <!-- BLOQUE QUE FALTA: Botón de Modo Oscuro e Idioma -->
-        <div class="nav-controls">
-            <button id="themeToggle" class="control-btn" aria-label="Cambiar tema">🌙</button>
-            <div class="lang-selector">
-                <button id="langEs" class="lang-btn active">ES</button>
-                <span>|</span>
-                <button id="langEn" class="lang-btn">EN</button>
+            <div class="nav-controls">
+                <button id="themeToggle" class="control-btn" aria-label="Cambiar tema">🌙</button>
+                <div class="lang-selector">
+                    <button id="langEs" class="lang-btn active">ES</button>
+                    <span>|</span>
+                    <button id="langEn" class="lang-btn">EN</button>
+                </div>
             </div>
-        </div>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-            ☰
-        </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
 
-        <div class="nav-links" id="navLinks">
-            <a href="index.html" data-i18n="nav.home">INICIO</a>
-            <a href="menu.html" data-i18n="nav.menu">MENÚ</a>
-            <a href="nosotros.html" data-i18n="nav.about">NOSOTROS</a>
-            <a href="reserva.html" data-i18n="nav.reservations">RESERVA</a>
-            <a href="contacto.html" data-i18n="nav.contact">CONTACTO</a>
-        </div>
-    </nav>
-</header>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" data-i18n="nav.home">INICIO</a>
+                <a href="menu.html" data-i18n="nav.menu">MENÚ</a>
+                <a href="nosotros.html" class="active" data-i18n="nav.about">NOSOTROS</a>
+                <a href="reserva.html" data-i18n="nav.reservations">RESERVA</a>
+                <a href="contacto.html" data-i18n="nav.contact">CONTACTO</a>
+            </div>
+        </nav>
+    </header>
+
     <!-- Contenedor Principal de Nosotros -->
     <div class="page-container">
 
-        <!-- Subtítulo Destacado (Permanece intacto en la parte superior) -->
+        <!-- Subtítulo Destacado -->
         <header class="header-tagline">
-            <p>Desde 1890 en la Alhambra dando refrigerios a los caminantes</p>
+            <p data-i18n="about.tagline">Desde 1890 en la Alhambra dando refrigerios a los caminantes</p>
         </header>
 
-        <!-- BLOQUE 1: Video MP4 (Izquierda) - Texto (Derecha) -->
+        <!-- BLOQUE 1: Video MP4 - Texto -->
         <div class="bloque-nosotros imagen-texto">
             <section class="hero-image-container">
                 <video class="hero-video" autoplay loop muted playsinline>
@@ -71,43 +68,50 @@
             </section>
 
             <section class="card text-card intro-card">
-                <p class="cursive-text">
+                <p class="cursive-text" data-i18n="about.intro_p1">
                     La Mimbre se redefine como un refugio gastronómico donde la herencia artesanal de Granada y la sofisticación orgánica convergen en un entorno histórico inigualable.
                 </p>
-                <p class="cursive-text">
+                <p class="cursive-text" data-i18n="about.intro_p2">
                     Situado bajo la sombra del Generalife, el restaurante ofrece una experiencia sensorial que celebra la calma y el respeto por el producto local. La nueva propuesta no solo se vive a través del paladar, sino a través de una atmósfera de "lujo relajado" que invita al comensal a desconectar en un espacio donde los materiales naturales, la luz de la Alhambra y la tradición artesana se entrelazan para crear momentos inolvidables en el corazón del patrimonio granadino.
                 </p>
             </section>
         </div>
 
-        <!-- BLOQUE 2: Texto (Izquierda) - Imagen (Derecha) -->
+        <!-- BLOQUE 2: Pregunta/Logo - Historia -->
         <div class="bloque-nosotros texto-imagen">
             <section class="card logo-card">
-                <h2 class="card-heading">¿Quieres probar una parte de la historia de granada?</h2>
+                <h2 class="card-heading" data-i18n="about.heading_history">¿Quieres probar una parte de la historia de granada?</h2>
                 <div class="logo-image-wrapper">
                     <img src="img/imagen2.jpg" alt="Logo La Mimbre Restaurante" class="logo-img">
                 </div>
             </section>
 
             <section class="card text-card history-card">
-                <p class="cursive-text">
+                <p class="cursive-text" data-i18n="about.history_intro">
                     En el año 1890 nacía La Mimbre, negocio que después de cuatro generaciones continúa vivo, en la actualidad es el más antiguo de Granada con 130 años de historia.
                 </p>
 
-                <h3 class="subtitle-bold">PERÍODO 1890-1965</h3>
+                <h3 class="subtitle-bold" data-i18n="about.period1_title">PERÍODO 1890-1965</h3>
 
-                <p class="cursive-text">
+                <p class="cursive-text" data-i18n="about.period1_p1">
                     La Familia Ballesteros montó un pequeño quiosco de madera sin más pretensiones que saciar la sed a los viajeros y terminó siendo punto de encuentro de artistas y bohemios que trasnochaban al frescor del Bosque Alhambreño.
                 </p>
 
-                <p class="cursive-text">
+                <p class="cursive-text" data-i18n="about.period1_p2">
                     La familia nació y vivió en las Huertas del Generalife "Fuente Peña", en aquel entonces a finales del siglo XIX, los propietarios eran los "Marqueses de Campotejar"... gracias a las gestiones de un caballero que fue D. Enrique Gómez Colón, propietario de Villa Paulina concedieron levantar un quiosco en su propiedad.
                 </p>
 
-                <p class="cursive-text">
+                <p class="cursive-text" data-i18n="about.period1_p3">
                     La Mimbre, era un ventorrillo de madera en el camino del cementerio, sin más deseo que atender a los viandantes, al poco tiempo, los asistentes a los entierros realizaban una parada al regreso, en la cual se detenían para tomar una copa y una copla ya lo decía:
                 </p>
 
-                <blockquote class="cursive-text quote">
+                <blockquote class="cursive-text quote" data-i18n="about.period1_quote">
                     "El que va a un entierro y no bebe sino el suyo viene de camino".
-... (13 líneas restantes)
+                </blockquote>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+</html>
