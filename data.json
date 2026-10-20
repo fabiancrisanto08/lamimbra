@@ -87,34 +87,34 @@
     },
     {
       "nombre": "Tarta de queso con mermelada de frutos rojos",
-      "imagen": "img/postre 3.png",
+      "imagen": "img/postre3.png",
       "subtitulo": ""
     },
     {
-      "nombre": "Cassata de «Los Italianos»",
-      "imagen": "img/postre 4.png",
+      "nombre": "Sorbete de limón",
+      "imagen": "img/postre4.png",
       "subtitulo": "Especialidad de la Casa"
     }
   ],
   "bebidas": [
     {
       "nombre": "Vino Tinto Rioja Crianza (Copa / Botella)",
-      "imagen": "img/bebida1-vino.jpg",
+      "imagen": "img/bebida1.png",
       "subtitulo": ""
     },
     {
       "nombre": "Cerveza Alhambra Reserva 1925",
-      "imagen": "img/bebida2-cerveza.jpg",
+      "imagen": "img/bebida2.png",
       "subtitulo": ""
     },
     {
       "nombre": "Agua Mineral con o sin gas (50 cl)",
-      "imagen": "img/bebida3-agua.jpg",
+      "imagen": "img/bebida3.png",
       "subtitulo": ""
     },
     {
       "nombre": "Refrescos y Zumos variados",
-      "imagen": "img/bebidas5-zumos.jpg",
+      "imagen": "img/bebida4.jpg",
       "subtitulo": ""
     }
   ]
