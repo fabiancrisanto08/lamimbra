@@ -4,7 +4,7 @@
    ========================================================= */
 
 :root {
-    --bg-img : url('img/los olivos.jpg');
+    --bg-img : url('img/los olivos 2.jpg');
     --card-bg: #ffffffdb;
     --text-color: #2b2b2b;
     --title-green: #3a5335;
@@ -20,7 +20,9 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
     font-family: var(--font-heading);
     color: var(--text-color);
     display: flex;
@@ -36,7 +38,7 @@ body {
     max-width: 520px;
     width: 92%;
     margin: 20px auto;
-    background-color: #ffffff;
+    background-image: var(--bg-img);
     padding: 30px 25px;
     position: relative;
     border-radius: 24px;
@@ -139,7 +141,7 @@ body {
 .leaf-top-right {
     top: 10px;
     right: -20px;
-    background-image: url('img\los olivos.jpg');
+    background-image: url('img\los olivos 2.jpg');
 }
 
 .leaf-mid-left {
