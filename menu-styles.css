@@ -11,6 +11,7 @@
     --border-radius: 20px;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
+    --sombra: 0 3px 8px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -25,36 +26,68 @@ body {
     background-position: center;
     font-family: var(--font-heading);
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
     min-height: 100vh;
     width: 100%;
+    padding-bottom: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Contenedor Principal de la Carta (Mobile First) */
+/* Modo Oscuro - Menú */
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --title-green: #81c784;
+    background-color: #121212 !important;
+}
+
+body.dark-mode .menu-container {
+    background-color: var(--card-bg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .dish-name {
+    color: #ffffff;
+}
+
+body.dark-mode .dish-name .subtitle {
+    color: #aaaaaa;
+}
+
+body.dark-mode .section-title h2 {
+    color: #cccccc;
+}
+
+/* Contenedor Principal de la Carta */
 .menu-container {
     max-width: 520px;
     width: 92%;
+<<<<<<< HEAD
     margin: 20px auto;
     background-image: var(--bg-img);
+=======
+    margin: 20px auto 0;
+    background-color: #ffffff;
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
     padding: 30px 25px;
     position: relative;
     border-radius: 24px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: max-width 0.3s ease, padding 0.3s ease;
+    transition: max-width 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
 .menu-grid {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
-/* Títulos de Sección */
+/* Títulos y Lista de Platos */
 .section-title {
     text-align: center;
     margin: 20px 0 25px 0;
@@ -75,7 +108,6 @@ body {
     margin-top: 5px;
 }
 
-/* Lista de Platos */
 .dish-list {
     display: flex;
     flex-direction: column;
@@ -127,7 +159,6 @@ body {
     font-style: italic;
 }
 
-/* Elementos Decorativos */
 .leaf-bg {
     position: absolute;
     width: 120px;
@@ -151,19 +182,21 @@ body {
     background-image: url('https://png.pngtree.com/png-clipart/20220111/ourmid/pngtree-hand-drawn-olive-branch-png-image_4152773.png');
 }
 
-/* =========================================================
-   ADAPTACIÓN PARA PORTÁTIL / PANTALLAS GRANDES (GRID 2 COLUMNAS)
-   ========================================================= */
+/* Responsivo Portátil (Grid 2 columnas) */
 @media (min-width: 900px) {
     .menu-container {
         max-width: 1100px;
+<<<<<<< HEAD
         /* Se amplía el ancho en computadoras */
+=======
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
         padding: 40px 50px;
     }
 
     .menu-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+<<<<<<< HEAD
         /* Muestra los bloques en 2 columnas */
         gap: 45px 40px;
         align-items: start;
@@ -204,4 +237,9 @@ body {
     justify-content: center;
     gap: 28px;
     width: 100%;
+=======
+        gap: 45px 40px;
+        align-items: start;
+    }
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
 }

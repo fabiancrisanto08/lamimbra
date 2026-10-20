@@ -1,15 +1,13 @@
 /* =========================================================
    CONTACTO - RESTAURANTE LA MIMBRE
-   contacto-styles.css
+   Archivo: contacto-styles.css
    ========================================================= */
 
 :root {
-  --azul-fondo:  #2F3E53;
-  --azul-panel:  #2F3E53;
-  --dorado: #e6b978;
+  --azul-fondo: #2F3E53;
+  --dorado: #DDB987;
   --dorado-claro: #f0c98d;
   --azul-enlace: #2498d8;
-  --blanco: #ffffff;
   --sombra: rgba(0, 0, 0, 0.20);
 }
 
@@ -28,6 +26,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.35;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- MODO OSCURO (CAMBIA SOLO FONDO Y COLOR DE TEXTO) ---------- */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #DDB987 !important;
+}
+
+body.dark-mode .ruta-titulo,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode address {
+  color: #DDB987 !important;
+}
+
+body.dark-mode .btn-mapa,
+body.dark-mode .boton-secundario {
+  border-color: #DDB987 !important;
+  color: #DDB987 !important;
+}
+
+body.dark-mode .btn-mapa:hover,
+body.dark-mode .boton-secundario:hover {
+  background: #DDB987 !important;
+  color: #121212 !important;
 }
 
 a {
@@ -38,7 +63,7 @@ a:hover {
   color: var(--dorado-claro);
 }
 
-/* CONTENEDOR PRINCIPAL */
+/* ---------- CONTENEDOR PRINCIPAL ---------- */
 .contacto {
   width: min(100%, 1050px);
   margin: 0 auto;
@@ -162,11 +187,6 @@ h3 {
   cursor: pointer;
 }
 
-.flecha {
-  font-size: 25px;
-  transition: transform 0.2s ease;
-}
-
 .ruta-titulo[aria-expanded="false"] .flecha {
   transform: rotate(-90deg);
 }
@@ -224,6 +244,8 @@ h3 {
 
 .boton-secundario {
   border: 1px solid var(--dorado);
+  background: transparent;
+  color: var(--dorado);
 }
 
 .boton-secundario:hover {

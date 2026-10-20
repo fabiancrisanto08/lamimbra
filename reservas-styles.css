@@ -1,4 +1,8 @@
-/* --- Variables globales --- */
+/* =========================================================
+   RESERVAS - LA MIMBRE RESTAURANTE
+   Archivo: reservas-styles.css
+   ========================================================= */
+
 :root {
     --bg-color: #d1d5d1;
     --card-bg: #d9dcd9;
@@ -9,6 +13,7 @@
     --green-success-border: #81c784;
     --green-success-text: #1b5e20;
     --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.12);
+    --sombra: 0 3px 8px rgba(0, 0, 0, 0.45);
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
 }
@@ -24,17 +29,51 @@ body {
     font-family: var(--font-body);
     color: var(--text-color);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow-x: hidden;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* --- Contenedor Principal --- */
+/* Modo Oscuro - Reservas */
+body.dark-mode {
+    --bg-color: #1a1c1a;
+    --card-bg: #242824;
+    --text-color: #e0e0e0;
+    --border-color: #3a403a;
+}
+
+body.dark-mode .title-reservas {
+    color: #a0a5a0;
+    text-shadow: none;
+}
+
+body.dark-mode .form-group label,
+body.dark-mode .privacy-text {
+    color: #d0d0d0;
+}
+
+body.dark-mode .input-wrapper input,
+body.dark-mode .input-wrapper select,
+body.dark-mode textarea {
+    background-color: #2e332e;
+    border-color: #4a524a;
+    color: #ffffff;
+}
+
+body.dark-mode .input-wrapper input::placeholder {
+    color: #8a908a;
+}
+
+body.dark-mode .btn-submit {
+    background-color: #2e332e;
+    color: #ffffff;
+    border-color: #4a524a;
+}
+
+/* Contenedor Principal */
 .main-container {
     width: 100%;
     max-width: 650px;
+    margin: 20px auto 0;
     padding: 20px;
     z-index: 2;
     display: flex;
@@ -42,7 +81,6 @@ body {
     align-items: center;
 }
 
-/* --- Título Reservas --- */
 .title-reservas {
     font-family: 'Arial Black', Impact, sans-serif;
     font-size: 2.8rem;
@@ -54,7 +92,7 @@ body {
     will-change: transform, opacity;
 }
 
-/* --- Formulario --- */
+/* Formulario */
 .reservation-form {
     width: 100%;
     display: flex;
@@ -88,7 +126,6 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Inputs, Selects y Textareas con Transiciones */
 .input-wrapper {
     position: relative;
     display: flex;
@@ -141,12 +178,6 @@ textarea {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.input-wrapper input:focus ~ .input-icon,
-.input-wrapper select:focus ~ .input-icon {
-    color: var(--green-accent);
-}
-
-/* --- Política de Privacidad --- */
 .privacy-card {
     background-color: var(--card-bg);
     border: 1.5px solid var(--border-color);
@@ -154,6 +185,7 @@ textarea {
     padding: 22px;
     box-shadow: var(--shadow-card);
     will-change: transform, opacity;
+    transition: background-color 0.3s ease;
 }
 
 .checkbox-container {
@@ -212,7 +244,6 @@ textarea {
     text-decoration: underline;
 }
 
-/* --- Botón y Mensaje de Éxito --- */
 .submit-card {
     background-color: var(--card-bg);
     border: 1.5px solid var(--border-color);
@@ -220,6 +251,7 @@ textarea {
     padding: 20px;
     box-shadow: var(--shadow-card);
     will-change: transform, opacity;
+    transition: background-color 0.3s ease;
 }
 
 .submit-action-area {
@@ -246,7 +278,6 @@ textarea {
     gap: 10px;
 }
 
-/* Mensaje de confirmación */
 .success-message {
     width: 100%;
     background-color: var(--green-success-bg);
@@ -290,24 +321,6 @@ textarea {
     text-decoration: underline;
 }
 
-/* --- Imagen del salón --- */
-.restaurant-image-container {
-    width: 100%;
-    margin-top: 35px;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: var(--shadow-card);
-    will-change: transform, opacity;
-}
-
-.restaurant-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-/* --- Responsive --- */
 @media (max-width: 600px) {
     .form-grid {
         grid-template-columns: 1fr;
@@ -316,38 +329,4 @@ textarea {
     .form-group.full-width {
         grid-column: span 1;
     }
-}
-
-/* ---------- NAVEGACIÓN ---------- */
-
-.cabecera {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 14px 0;
-    background: transparent;
-    width: 100%; /* <--- AÑADIR ESTA LÍNEA: Obliga al header a ocupar el 100% del ancho */
-}
-
-.nav {
-    width: min(90%, 1050px); /* Mantendrá los 1050px máximos idénticos a index.html */
-    margin: 0 auto;
-    min-height: 54px;
-    padding: 0 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #eeeeee;
-    border-radius: 12px;
-    box-shadow: var(--sombra);
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    width: 100%;
 }

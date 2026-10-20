@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  {
+=======
+{
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
   "entrantes": [
     {
       "nombre": "Sopa de Picadillo",
@@ -58,6 +62,10 @@
       "subtitulo": "Especialidad de la Casa"
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
       "nombre": "Salmón a la plancha",
       "imagen": "img/Salmón a la plancha.jpg",
       "subtitulo": ""
@@ -117,4 +125,8 @@
       "subtitulo": ""
     }
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 654ee534b3bdd2e9afc0c7994f20a0e3d307619b
