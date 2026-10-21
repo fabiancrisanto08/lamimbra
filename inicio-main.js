@@ -15,12 +15,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         menuToggle.addEventListener("click", (evento) => {
             evento.stopPropagation();
-            const estaAbierto = navLinks.classList.toggle("active");
+            const estaAbierto = navLinks.classList.contains("active");
 
-            menuToggle.textContent = estaAbierto ? "✕" : "☰";
-            menuToggle.setAttribute("aria-label", estaAbierto ? "Cerrar menú" : "Abrir menú");
+            if (estaAbierto) {
+                navLinks.classList.remove("active");
+                menuToggle.textContent = "☰";
+                menuToggle.setAttribute("aria-label", "Abrir menú");
+            } else {
+                navLinks.classList.add("active");
+                menuToggle.textContent = "✕";
+                menuToggle.setAttribute("aria-label", "Cerrar menú");
+            }
         });
 
+        // CERRAR EL MENÚ AL HACER CLIC EN UN ENLACE
         navLinks.querySelectorAll("a").forEach((enlace) => {
             enlace.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -29,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
+        // CERRAR EL MENÚ AL HACER CLIC FUERA DE ÉL
         document.addEventListener("click", (evento) => {
             if (!menuToggle.contains(evento.target) && !navLinks.contains(evento.target)) {
                 if (navLinks.classList.contains("active")) {
@@ -49,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ------------------------------------------------------
-    // 3. ANIMACIONES EN SCROLL SUAVE (SI EXISTEN ELEMENTOS)
+    // 3. ANIMACIONES AL HACER SCROLL (INTERSECTION OBSERVER)
     // ------------------------------------------------------
     const elementosAparecer = document.querySelectorAll(
         ".contenido-centro, .galeria-platos, .equipo-contenido, .cita, .historia"
@@ -72,6 +81,33 @@ document.addEventListener("DOMContentLoaded", () => {
             elemento.classList.add("aparecer");
             observador.observe(elemento);
         });
+    }
+
+    // ------------------------------------------------------
+    // 4. EFECTO PARALLAX EN IMÁGENES DESTACADAS
+    // ------------------------------------------------------
+    const imagenDestacada = document.querySelector(".imagen-destacada img");
+    const imagenHistoria = document.querySelector(".historia-imagen img");
+
+    const aplicarParallax = () => {
+        if (imagenDestacada) {
+            const contenedor = imagenDestacada.parentElement;
+            const posicion = contenedor.getBoundingClientRect();
+            const movimiento = (window.innerHeight / 2 - posicion.top) * 0.15;
+            imagenDestacada.style.transform = `translateY(${movimiento}px)`;
+        }
+
+        if (imagenHistoria) {
+            const contenedor = imagenHistoria.parentElement;
+            const posicion = contenedor.getBoundingClientRect();
+            const movimiento = (window.innerHeight / 2 - posicion.top) * 0.15;
+            imagenHistoria.style.transform = `translateY(${movimiento}px)`;
+        }
+    };
+
+    if (imagenDestacada || imagenHistoria) {
+        window.addEventListener("scroll", aplicarParallax);
+        aplicarParallax(); // Ejecutar al cargar para posicionar correctamente
     }
 
 });

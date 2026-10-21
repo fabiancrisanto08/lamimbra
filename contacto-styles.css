@@ -29,7 +29,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ---------- MODO OSCURO (CAMBIA SOLO FONDO Y COLOR DE TEXTO) ---------- */
+/* ---------- MODO OSCURO ---------- */
 body.dark-mode {
   background-color: #121212 !important;
   color: #DDB987 !important;
@@ -187,6 +187,10 @@ h3 {
   cursor: pointer;
 }
 
+.ruta-titulo .flecha {
+  transition: transform 0.3s ease;
+}
+
 .ruta-titulo[aria-expanded="false"] .flecha {
   transform: rotate(-90deg);
 }
@@ -253,7 +257,30 @@ h3 {
   color: var(--azul-fondo);
 }
 
-/* RESPONSIVE */
+/* ---------- ANIMACIONES DE ENTRADA Y SCROLL REVEAL (SIN FALLOS) ---------- */
+
+/* Estado por defecto: Si JS no añade clases, todo permanece visible */
+.revelar {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Estado preparado para la animación cuando JavaScript está activo */
+html.js-activo .revelar {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+/* Estado activo: cuando el elemento entra en pantalla */
+html.js-activo .revelar.activo {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 700px) {
   .contacto {
     padding: 15px 20px 45px;

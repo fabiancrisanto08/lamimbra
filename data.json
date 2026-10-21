@@ -1,0 +1,121 @@
+{
+  "entrantes": [
+    {
+      "nombre": "Sopa de Picadillo",
+      "imagen": "img/plato1.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Gazpacho con picadillo de hortalizas",
+      "imagen": "img/Gazpacho con picadillo de hortalizas.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Sopa Andalusí",
+      "imagen": "img/Sopa Andalusí.jpg",
+      "subtitulo": "Especialidad de la Casa"
+    },
+    {
+      "nombre": "Jamón Serrano de Trevélez Alpujarras Cortado a Cuchillo (100 gr.)",
+      "imagen": "img/jamoon cerrano.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Queso Curado Boffard reserva etiqueta roja (125 gr.)",
+      "imagen": "img/Queso Curado Boffard reserva etiqueta roja (125 gr.).jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Jamón Serrano con Melón",
+      "imagen": "img/Jamón Serrano con Melón.jpg",
+      "subtitulo": ""
+    }
+  ],
+  "principal": [
+    {
+      "nombre": "Entrecot de ternera a la plancha acompañado de patatas fritas",
+      "imagen": "img/Entrecot de ternera a la plancha acompañado de patatas fritas.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Puntas de solomillo de cerdo a la Miel de Romero",
+      "imagen": "img/Puntas de solomillo de cerdo a la Miel de Romero.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Pechugas de pollo a la plancha acompañado de Arroz Nazarí",
+      "imagen": "img/Pechugas de pollo a la plancha acompañado de Arroz Nazarí.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Chuletillas de cordero lechal acompañado de cous-cous con cebolla caramelizada",
+      "imagen": "img/Chuletillas de cordero lechal acompañado de cous-cous con cebolla caramelizada.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Calamaritos fritos",
+      "imagen": "img/Calamaritos fritos.jpg",
+      "subtitulo": "Especialidad de la Casa"
+    },
+    {
+
+      "nombre": "Salmón a la plancha",
+      "imagen": "img/Salmón a la plancha.jpg",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Bacalao frito con tomate",
+      "imagen": "img/Bacalao frito con tomate.jpg",
+      "subtitulo": "Especialidad de la Casa"
+    },
+    {
+      "nombre": "Choto -cabrito- al Ajillo en salsa",
+      "imagen": "img/Choto -cabrito- al Ajillo en salsa.jpg",
+      "subtitulo": ""
+    }
+  ],
+  "postres": [
+    {
+      "nombre": "Piononos “Casa Ysla” con helado de Leche Merengada",
+      "imagen": "img/postre 1.png",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Tarta de Chocolate",
+      "imagen": "img/postre2.png",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Tarta de queso con mermelada de frutos rojos",
+      "imagen": "img/postre3.png",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Sorbete de limón",
+      "imagen": "img/postre4.png",
+      "subtitulo": "Especialidad de la Casa"
+    }
+  ],
+  "bebidas": [
+    {
+      "nombre": "Vino Tinto Rioja Crianza (Copa / Botella)",
+      "imagen": "img/bebida1.png",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Cerveza Alhambra Reserva 1925",
+      "imagen": "img/bebida2.png",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Agua Mineral con o sin gas (50 cl)",
+      "imagen": "img/bebida3.png",
+      "subtitulo": ""
+    },
+    {
+      "nombre": "Refrescos y Zumos variados",
+      "imagen": "img/bebida4.jpg",
+      "subtitulo": ""
+    }
+  ]
+}
