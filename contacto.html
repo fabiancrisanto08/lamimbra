@@ -9,6 +9,8 @@
   <!-- Estilos del navbar unificado y de la página de contacto -->
   <link rel="stylesheet" href="inicio-styles.css">
   <link rel="stylesheet" href="contacto-styles.css">
+  <!--Estilos boton sonido-->
+  <link rel="stylesheet" href="botonAudioGlobal.css">
 
   <!-- Scripts de la navegación unificada y de interacción de contacto -->
   <script src="inicio-main.js" defer></script>
@@ -19,7 +21,9 @@
 </head>
 
 <body>
-
+    <!-- Audio y Botón Global -->
+    <audio id="mi-audio" src="audio/audio1.mp3" preload="auto"></audio>
+    <button id="audio-btn">🔊</button>
   <!-- ==================== NAVEGACIÓN UNIFICADA ==================== -->
   <header class="cabecera">
       <nav class="nav">
@@ -172,10 +176,7 @@
       <article class="ruta">
         <button class="ruta-titulo" type="button" aria-expanded="true">
           <span>Autobús Urbano</span>
-<<<<<<< HEAD
           <span class="flecha" aria-hidden="true">⌄</span>
-=======
->>>>>>> 7772c8f0b1e383fd7a5dce664b2c5ea99a27043d
         </button>
 
         <div class="ruta-contenido">
