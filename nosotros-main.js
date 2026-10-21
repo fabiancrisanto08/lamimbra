@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Animación escalonada para los bloques principales (Video + Tarjeta Intro)
     .from('.imagen-texto > *', {
-        y: 40,
+        y: 0,
         opacity: 0,
         stagger: 0.2,
         duration: 0.9
