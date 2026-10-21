@@ -6,15 +6,13 @@
   <meta name="description" content="Contacto, ubicación y cómo llegar al Restaurante La Mimbre en Granada.">
   <title>Contacto | Restaurante La Mimbre</title>
 
-  <!-- Estilos del navbar unificado y de la página de contacto -->
+  <!-- Hojas de estilo CSS vinculadas correctamente -->
   <link rel="stylesheet" href="inicio-styles.css">
   <link rel="stylesheet" href="contacto-styles.css">
 
-  <!-- Scripts de la navegación unificada y de interacción de contacto -->
+  <!-- Scripts unificados de interacción, animaciones e idioma -->
   <script src="inicio-main.js" defer></script>
   <script src="contacto-main.js" defer></script>
-
-  <!-- Scripts de modo oscuro e idioma -->
   <script src="theme-lang.js" defer></script>
 </head>
 
@@ -53,16 +51,16 @@
   <main class="contacto">
 
     <!-- LOGO DE LA SECCIÓN -->
-    <header class="contacto-header">
+    <header class="contacto-header revelar">
       <img
-        src="img\Logo_minimalista_La_Mimbre_Restaurante.png"
+        src="img/Logo_minimalista_La_Mimbre_Restaurante.png"
         alt="La Mimbre Restaurante"
         class="logo-restaurante"
       >
     </header>
 
     <!-- DATOS DE CONTACTO -->
-    <section class="datos-contacto" aria-labelledby="titulo-contacto">
+    <section class="datos-contacto revelar" aria-labelledby="titulo-contacto">
       <h2 id="titulo-contacto" data-i18n="contact.title">Contacto</h2>
 
       <address>
@@ -95,7 +93,7 @@
     </section>
 
     <!-- MAPA -->
-    <section class="mapa-section" aria-labelledby="titulo-mapa">
+    <section class="mapa-section revelar" aria-labelledby="titulo-mapa">
       <div class="section-title">
         <h2 id="titulo-mapa" data-i18n="contact.map_title">MAPA</h2>
       </div>
@@ -121,7 +119,7 @@
     </section>
 
     <!-- CÓMO LLEGAR -->
-    <section class="como-llegar" aria-labelledby="titulo-como-llegar">
+    <section class="como-llegar revelar" aria-labelledby="titulo-como-llegar">
       <h2 id="titulo-como-llegar" data-i18n="contact.how_to_get_title">Cómo llegar</h2>
 
       <p class="introduccion" data-i18n="contact.how_to_get_intro">
@@ -134,9 +132,10 @@
       </p>
 
       <!-- ANDANDO -->
-      <article class="ruta">
+      <article class="ruta revelar">
         <button class="ruta-titulo" type="button" aria-expanded="true">
           <span data-i18n="contact.route_walk_title">Andando (Rutas a pie)</span>
+          <span class="flecha" aria-hidden="true">⌄</span>
         </button>
 
         <div class="ruta-contenido">
@@ -170,7 +169,7 @@
       </article>
 
       <!-- AUTOBÚS -->
-      <article class="ruta">
+      <article class="ruta revelar">
         <button class="ruta-titulo" type="button" aria-expanded="true">
           <span data-i18n="contact.route_bus_title">Autobús Urbano</span>
           <span class="flecha" aria-hidden="true">⌄</span>
@@ -192,9 +191,10 @@
       </article>
 
       <!-- COCHE / TAXI -->
-      <article class="ruta">
+      <article class="ruta revelar">
         <button class="ruta-titulo" type="button" aria-expanded="true">
           <span data-i18n="contact.route_car_title">Coche / Taxi</span>
+          <span class="flecha" aria-hidden="true">⌄</span>
         </button>
 
         <div class="ruta-contenido">
@@ -208,9 +208,10 @@
       </article>
 
       <!-- TREN TURÍSTICO -->
-      <article class="ruta">
+      <article class="ruta revelar">
         <button class="ruta-titulo" type="button" aria-expanded="true">
           <span data-i18n="contact.route_train_title">Tren Turístico (Granada City Tour)</span>
+          <span class="flecha" aria-hidden="true">⌄</span>
         </button>
 
         <div class="ruta-contenido">
@@ -225,7 +226,7 @@
     </section>
 
     <!-- ACCIONES -->
-    <section class="acciones" aria-label="Acciones de contacto">
+    <section class="acciones revelar" aria-label="Acciones de contacto">
       <a class="boton boton-principal" href="tel:+34958222776" data-i18n="contact.call_btn">
         📞 Llamar al restaurante
       </a>
